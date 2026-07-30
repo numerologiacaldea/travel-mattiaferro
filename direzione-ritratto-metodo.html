@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mattia Ferro, travel advisor</title>
+<meta name="description" content="Ho studiato gli alberghi migliori del mondo. Poi ne ho costruito uno. Lo gestisco da otto anni. Adesso progetto viaggi. Italia, Stati Uniti, Golfo.">
+<link rel="canonical" href="https://travel.mattiaferro.com/">
+<link rel="alternate" hreflang="it" href="https://travel.mattiaferro.com/">
+<link rel="alternate" hreflang="en" href="https://travel.mattiaferro.com/en/">
+<link rel="alternate" hreflang="x-default" href="https://travel.mattiaferro.com/en/">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Mattia Ferro, travel advisor">
+<meta property="og:description" content="Ho studiato gli alberghi migliori del mondo. Poi ne ho costruito uno. Lo gestisco da otto anni.">
+<meta property="og:url" content="https://travel.mattiaferro.com/">
+<meta property="og:image" content="https://travel.mattiaferro.com/img/og-mattia-1200x630.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<style>
+:root{
+  --paper:#f7f4ee; --ink:#17160f; --soft:#63604f; --line:#ddd7c8;
+  --deep:#12130f; --deep-ink:#efece3; --deep-soft:#a6a293;
+  --acc:#155445;
+}
+@media(prefers-color-scheme:dark){
+  :root{--paper:#121210; --ink:#eeebe2; --soft:#9c9889; --line:#2c2b25;
+        --deep:#000; --deep-ink:#eeebe2; --deep-soft:#8f8c7f; --acc:#63c3a6}
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--paper);color:var(--ink);
+  font:400 17.5px/1.62 Georgia,"Iowan Old Style","Times New Roman",serif}
+.wrap{max-width:37rem;margin:0 auto}
+.pad{padding-left:1.35rem;padding-right:1.35rem}
+
+/* ---------- tipografia da rivista ---------- */
+.label{font:500 .66rem/1 system-ui,-apple-system,"Segoe UI",sans-serif;
+  letter-spacing:.19em;text-transform:uppercase;color:var(--soft)}
+.label.rule{display:flex;align-items:center;gap:.8rem;margin-bottom:1.5rem}
+.label.rule::after{content:"";flex:1;height:1px;background:var(--line)}
+h1{font-size:1.78rem;line-height:1.17;font-weight:400;letter-spacing:-.012em}
+h2{font-size:1.42rem;line-height:1.2;font-weight:400;letter-spacing:-.01em;margin-bottom:.9rem}
+p{margin-bottom:1rem}
+p:last-child{margin-bottom:0}
+a{color:inherit;text-underline-offset:.18em;text-decoration-thickness:.5px}
+.lead{font-size:1.14rem;color:var(--soft)}
+section{padding-top:3.4rem}
+.sans{font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
+
+/* ---------- fotografia ---------- */
+figure{margin:1.6rem 0}
+figure img,.ph{display:block;width:100%;height:auto;background:#e6e1d4}
+figcaption{font:400 .74rem/1.45 system-ui,-apple-system,sans-serif;
+  color:var(--soft);margin-top:.55rem;padding-right:2rem}
+/* segnaposto: sostituire con <img> reale */
+.ph{position:relative;display:flex;align-items:flex-end;
+  background:
+    linear-gradient(160deg,rgba(21,84,69,.14),rgba(21,84,69,.03) 55%,rgba(0,0,0,.10)),
+    repeating-linear-gradient(45deg,#e9e4d7 0 7px,#e5dfd1 7px 14px);
+  color:#4a4636}
+@media(prefers-color-scheme:dark){.ph{background:
+    linear-gradient(160deg,rgba(99,195,166,.13),rgba(0,0,0,.2)),
+    repeating-linear-gradient(45deg,#22221d 0 7px,#1d1d19 7px 14px);color:#8f8c7f}}
+.ph span{font:500 .68rem/1.4 system-ui,sans-serif;letter-spacing:.1em;
+  text-transform:uppercase;padding:.9rem 1rem}
+
+/* ---------- apertura ---------- */
+.hero{position:relative}
+.hero .ph,.hero img{aspect-ratio:4/5;max-height:51vh;object-fit:cover}
+.hero .over{position:absolute;left:0;right:0;top:0;padding:1.1rem 1.35rem;
+  background:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,0));color:#f4f1e8}
+.hero .over .label{color:#e2ddcf}
+.title{padding:1.7rem 1.35rem 0}
+.title h1 span{display:block}
+.title .lead{margin-top:.85rem}
+
+/* ---------- azione ---------- */
+.cta{display:block;text-align:center;background:var(--acc);color:var(--paper);
+  font:500 1.02rem/1 system-ui,-apple-system,sans-serif;letter-spacing:.01em;
+  text-decoration:none;padding:1.12rem 1rem;border-radius:3px;margin:1.5rem 0 .7rem}
+@media(prefers-color-scheme:dark){.cta{color:#0d0d0b}}
+.note{font:400 .87rem/1.55 system-ui,-apple-system,sans-serif;color:var(--soft)}
+
+/* ---------- fascia prova, invertita ---------- */
+.band{background:var(--deep);color:var(--deep-ink);margin-top:3.4rem;
+  padding:3rem 1.35rem 2.6rem}
+.band .label{color:var(--deep-soft)}
+.band blockquote{font-size:1.62rem;line-height:1.24;letter-spacing:-.01em;margin:.2rem 0 .9rem}
+.band .sign{font:400 .8rem/1.5 system-ui,sans-serif;color:var(--deep-soft)}
+.band .also{font:400 .87rem/1.55 system-ui,sans-serif;color:var(--deep-soft);margin-top:1.7rem}
+.band .also a{color:var(--deep-ink)}
+.band figure{margin:1.8rem 0 0}
+.band .ph{aspect-ratio:3/2}
+.band figcaption{color:var(--deep-soft)}
+
+/* ---------- il metodo ---------- */
+.step{display:grid;grid-template-columns:2.3rem 1fr;gap:.9rem;
+  padding:1.15rem 0;border-top:1px solid var(--line)}
+.step:first-of-type{border-top:0;padding-top:.4rem}
+.step .n{font-size:1.5rem;line-height:1.15;color:var(--acc);font-variant-numeric:oldstyle-nums}
+.step h3{font-size:1.06rem;line-height:1.3;font-weight:400;margin-bottom:.25rem}
+.step p{font-size:.99rem;color:var(--soft);margin:0}
+.closer{margin-top:1.5rem;font-size:1.12rem}
+
+/* ---------- fatti in colonna ---------- */
+.facts{border-top:1px solid var(--line);margin-top:1.6rem;padding-top:1.1rem}
+.facts div{display:flex;gap:1rem;justify-content:space-between;
+  font:400 .87rem/1.5 system-ui,sans-serif;padding:.42rem 0;color:var(--soft)}
+.facts div b{font-weight:500;color:var(--ink);text-align:right}
+.strong{font-size:1.06rem}
+
+footer{margin-top:3.6rem;border-top:1px solid var(--line);
+  padding:1.5rem 1.35rem 3rem;
+  font:400 .78rem/1.62 system-ui,sans-serif;color:var(--soft)}
+footer p{margin-bottom:.7rem}
+.langbar{padding:1rem 1.35rem .2rem;font:400 .78rem/1 system-ui,sans-serif;color:var(--soft)}
+.langbar a{color:var(--soft)}
+.langbar b{color:var(--ink);font-weight:500}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <p class="langbar"><b>Italiano</b> &nbsp;/&nbsp; <a href="/en/">English</a></p>
+
+  <!-- 1. APERTURA: il ritratto -->
+  <header class="hero">
+    <figure style="margin:1rem 0 0">
+      <div class="ph"><span>Scatto 1 &middot; ritratto verticale 4:5<br>Mattia in veranda, luce del mattino, sguardo in camera</span></div>
+    </figure>
+    <div class="over"><p class="label">Mattia Ferro &middot; Cavallino-Treporti, Venezia</p></div>
+  </header>
+
+  <div class="title">
+    <h1>
+      <span>Ho studiato gli alberghi migliori del mondo.</span>
+      <span>Poi ne ho costruito uno.</span>
+      <span>Lo gestisco da otto anni.</span>
+    </h1>
+    <p class="lead">Adesso progetto anche i viaggi degli altri. Italia, Stati Uniti, Golfo.</p>
+    <a class="cta" href="https://wa.me/393297647959?text=Ciao%20Mattia%2C%20ho%20letto%20la%20lettera%20in%20suite.%20Vorrei%20parlare%20di%20un%20viaggio.">Scrivimi su WhatsApp</a>
+    <p class="note">Rispondo io. Di solito in giornata.</p>
+  </div>
+
+  <!-- 2. LA PROVA, subito -->
+  <div class="band">
+    <p class="label">Chi lo dice</p>
+    <blockquote>&laquo;Innovatore del turismo italiano di alta gamma&raquo;</blockquote>
+    <p class="sign">Mirko Crocoli, Forbes Life, edizione cartacea, maggio 2026, pagina 161.</p>
+    <figure>
+      <div class="ph"><span>Scatto 3 &middot; 3:2<br>La rivista aperta a pagina 161, luce di finestra</span></div>
+      <figcaption>Quella pagina esiste solo su carta. È il motivo per cui la vedi fotografata e non linkata.</figcaption>
+    </figure>
+    <p class="also">Questa invece è online: Forbes Italia ha scritto della struttura il 14 luglio 2025 e l'ha definita &laquo;la prima struttura italiana a 5 stelle di questo genere&raquo;. <a href="https://forbes.it/2025/07/14/luxury-camp-lesperienza-esclusiva-delle-vacanze-allaria-aperta">Leggi l'articolo</a>.</p>
+  </div>
+
+  <!-- 3. IL METODO -->
+  <section class="pad">
+    <p class="label rule">Il metodo</p>
+    <h2>Come leggo un albergo</h2>
+    <p>Un albergo non si giudica dalle fotografie. Si giudica da chi ci lavora. Le quattro cose che guardo per te sono le stesse che guardo qui ogni mattina, dall'altra parte del banco.</p>
+
+    <figure>
+      <div class="ph" style="aspect-ratio:3/2"><span>Scatto 2 &middot; 3:2<br>Mattia con la reception, prima degli arrivi. Nessuno guarda in camera</span></div>
+      <figcaption>Cavallino-Treporti, la mattina degli arrivi.</figcaption>
+    </figure>
+
+    <div class="step"><div class="n">1</div><div>
+      <h3>Chi c'è al banco</h3>
+      <p>Chiedo da quanti anni ci lavora. La risposta dice più della categoria dichiarata.</p>
+    </div></div>
+    <div class="step"><div class="n">2</div><div>
+      <h3>Se le facce tornano</h3>
+      <p>La stagione dopo ritrovi le stesse persone, oppure no. Nessun albergo lo scrive nella propria presentazione.</p>
+    </div></div>
+    <div class="step"><div class="n">3</div><div>
+      <h3>Chi può dire di sì</h3>
+      <p>Se in sala nessuno decide niente senza chiedere il permesso a qualcuno di sopra, al quinto giorno lo senti.</p>
+    </div></div>
+    <div class="step"><div class="n">4</div><div>
+      <h3>Cosa succede quando qualcosa va storto</h3>
+      <p>Il livello di un posto non si vede all'arrivo. Si vede lì.</p>
+    </div></div>
+
+    <p class="closer">È la parte che le fotografie non dicono, ed è la parte che poi ti resta.</p>
+  </section>
+
+  <!-- 4. CHI SCRIVE -->
+  <section class="pad">
+    <p class="label rule">Chi scrive</p>
+    <p>Ho fondato il Luxury Camp at Union Lido nel 2018 e da allora lo gestisco. Venti suite open air, circa seicento famiglie l'anno da Germania, Austria, Stati Uniti, Emirati e Cina.</p>
+    <p>Prima di progettarlo ho passato anni a smontare le strutture degli altri. Dubai, Las Vegas, Shanghai. Ricerca su come sono gestiti davvero i migliori alberghi del mondo, non su come vengono fotografati.</p>
+
+    <figure>
+      <div class="ph" style="aspect-ratio:1/1"><span>Scatto 4 &middot; 1:1<br>Dettaglio di standard: la veranda apparecchiata prima del servizio</span></div>
+      <figcaption>Una veranda alle sette del mattino, prima che arrivi qualcuno.</figcaption>
+    </figure>
+
+    <p>Mio zio, Roberto Senigaglia, è stato Concierge Chiavi d'Oro al Belmond Hotel Cipriani di Venezia per trent'anni. Quello che mi è rimasto non sono gli ospiti famosi. È che trattava uno sconosciuto che chiedeva un'indicazione esattamente come trattava un ospite del Cipriani.</p>
+
+    <div class="facts">
+      <div><span>Struttura fondata</span><b>2018</b></div>
+      <div><span>Suite open air gestite</span><b>20</b></div>
+      <div><span>Famiglie ospitate ogni anno</span><b>circa 600</b></div>
+      <div><span>Progetto viaggi in</span><b>Italia, Stati Uniti, Golfo</b></div>
+    </div>
+  </section>
+
+  <!-- 5. CON CHI LAVORO -->
+  <section class="pad">
+    <p class="label rule">Con chi lavoro</p>
+    <p>Progetto e prenoto attraverso Fora Travel, agenzia di New York, dove sono <a href="https://www.foratravel.com/advisor/mattia-ferro">advisor di livello Pro</a>. Fora fa parte del <a href="https://www.virtuoso.com/advisor/mattferr74504">network Virtuoso</a>, e da lì arrivano i vantaggi che ricevi in albergo.</p>
+    <p>Paghi la tariffa della struttura. Non si aggiunge niente perché la prenotazione passa da me. Dove i programmi valgono, dentro quella stessa tariffa rientrano spesso la colazione, un credito da spendere in struttura, l'upgrade quando c'è disponibilità, l'uscita posticipata. Quali valgano, e in quale albergo, te lo scrivo prima di prenotare. Non ti prometto una colazione che poi non c'è.</p>
+  </section>
+
+  <!-- 6. COME MI PAGO -->
+  <section class="pad">
+    <p class="label rule">Come mi pago</p>
+    <p>Il compenso me lo pagano le strutture, con una commissione sul soggiorno. Vuol dire che il mio guadagno dipende da dove ti mando, e devi saperlo prima di scrivermi, non dopo.</p>
+    <p class="strong">Per questo l'unica prova che puoi chiedermi è che ti dica di no.</p>
+    <p>A chi ha dormito al Luxury Camp at Union Lido la progettazione è inclusa. Per gli itinerari lunghi si valuta un onorario, e te lo dico prima di cominciare, non alla fine.</p>
+  </section>
+
+  <!-- 7. CHIUSURA -->
+  <section class="pad">
+    <p class="label rule">Parliamone</p>
+    <h2>Si comincia da venti minuti di conversazione</h2>
+    <p>Non c'è niente da decidere adesso e nessun obbligo di prenotare. Dimmi dove stai pensando di andare e in che periodo.</p>
+
+    <figure>
+      <div class="ph" style="aspect-ratio:3/2"><span>Scatto 7 &middot; 3:2<br>La lettera A5 sul tavolo della veranda, luce della sera</span></div>
+      <figcaption>La stessa lettera che hai in mano.</figcaption>
+    </figure>
+
+    <a class="cta" href="https://wa.me/393297647959?text=Ciao%20Mattia%2C%20ho%20letto%20la%20lettera%20in%20suite.%20Vorrei%20parlare%20di%20un%20viaggio.">Scrivimi su WhatsApp</a>
+    <p class="note">Se non usi WhatsApp: <a href="mailto:booking@luxurycamp.it">booking@luxurycamp.it</a></p>
+  </section>
+
+  <footer>
+    <p>La progettazione dei viaggi è un servizio personale di Mattia Ferro. Non è un servizio della struttura. Le prenotazioni sono eseguite da Fora Travel Inc., New York.</p>
+    <p>Luxury Camp at Union Lido, Via Fausta 258, 30013 Cavallino-Treporti (VE), Italia.</p>
+  </footer>
+
+</div>
+</body>
+</html>

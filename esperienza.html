@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mattia Ferro, travel advisor</title>
+<meta name="description" content="Ho studiato l'alta gamma nel mondo, poi l'ho costruita, poi l'ho gestita per otto anni. Adesso progetto viaggi. Italia, Stati Uniti, Golfo.">
+<link rel="canonical" href="https://travel.mattiaferro.com/">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Mattia Ferro, travel advisor">
+<meta property="og:description" content="Ho studiato l'alta gamma nel mondo, poi l'ho costruita, poi l'ho gestita per otto anni. Adesso progetto viaggi.">
+<meta property="og:url" content="https://travel.mattiaferro.com/">
+<meta property="og:image" content="https://travel.mattiaferro.com/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<script>if('IntersectionObserver' in window)document.documentElement.className='js';</script>
+<style>
+:root{
+  --ink:#f2ece1;      /* testo su fondo scuro */
+  --dim:#a49c8e;      /* testo secondario */
+  --bg:#0c0d0c;       /* fondo pagina */
+  --bg2:#141513;      /* fondo blocchi */
+  --brass:#c2a878;    /* filetti, occhielli */
+  --line:rgba(242,236,225,.14);
+  --btn:#efe7d8; --btnink:#101210;
+  --serif:"Iowan Old Style",Georgia,"Times New Roman",serif;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--serif);overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+[hidden]{display:none!important}
+
+/* ---------- impalcatura ---------- */
+.wrap{max-width:38rem;margin:0 auto;padding:0 1.35rem}
+section{position:relative}
+
+/* ---------- lastra fotografica a piena schermata ---------- */
+.plate{position:relative;width:100%;min-height:78svh;display:flex;align-items:flex-end;overflow:hidden;background:#000}
+.plate.tall{min-height:92svh}
+.plate.short{min-height:56svh}
+.shot{position:absolute;inset:0;background-size:cover;background-position:center}
+.scrim{position:absolute;inset:0;background:
+  linear-gradient(to top,rgba(6,7,6,.97) 0%,rgba(6,7,6,.90) 14%,rgba(6,7,6,.55) 32%,rgba(6,7,6,.10) 58%,rgba(6,7,6,0) 74%,rgba(6,7,6,.42) 100%)}
+/* grana fine: rende fotografico anche il segnaposto */
+.plate::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;opacity:.16;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E")}
+.plate .wrap{position:relative;z-index:2;width:100%;padding-top:3rem;padding-bottom:2.1rem;
+  text-shadow:0 1px 26px rgba(0,0,0,.6),0 1px 3px rgba(0,0,0,.35)}
+.plate .eyebrow,.plate h2{color:#e5d3ad}
+
+/* etichetta provvisoria dello scatto: sparisce in produzione */
+.slug{position:absolute;z-index:3;top:.85rem;left:.85rem;font:400 9.5px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:rgba(242,236,225,.5);border:1px solid rgba(242,236,225,.22);padding:.42rem .55rem;border-radius:2px;background:rgba(0,0,0,.28);backdrop-filter:blur(2px)}
+
+/* ---------- tipografia ---------- */
+.eyebrow{font:400 10.5px/1 var(--sans);letter-spacing:.26em;text-transform:uppercase;color:var(--brass);margin-bottom:1.5rem}
+h1{font-weight:400;font-size:clamp(2rem,8.4vw,3.15rem);line-height:1.08;letter-spacing:-.015em;text-wrap:balance}
+h1 .q{color:var(--ink)}
+.byline{font:400 12px/1.5 var(--sans);letter-spacing:.02em;color:var(--dim);margin-top:1rem;padding-top:1rem;border-top:1px solid var(--line);max-width:24rem;margin-bottom:1.35rem}
+.claim{font-size:1.16rem;line-height:1.35;color:var(--ink);margin-bottom:0}
+h2{font:400 10.5px/1 var(--sans);letter-spacing:.26em;text-transform:uppercase;color:var(--brass);margin-bottom:1.15rem}
+.big{font-size:clamp(1.35rem,5.4vw,1.85rem);line-height:1.24;letter-spacing:-.01em;text-wrap:balance}
+p{margin-bottom:1rem;max-width:33rem}
+p:last-child{margin-bottom:0}
+.dim{color:var(--dim)}
+.cap{font:400 12.5px/1.55 var(--sans);color:var(--dim);letter-spacing:.01em;margin-top:1.3rem;padding-left:.85rem;border-left:1px solid var(--brass);max-width:26rem}
+.block{padding:4.2rem 0}
+.block.tight{padding:3rem 0}
+.b2{background:var(--bg2)}
+.hr{height:1px;background:var(--line);border:0;margin:2.4rem 0}
+
+/* ---------- prove ---------- */
+.proofs{list-style:none;margin-top:.4rem}
+.proofs li{padding:1.25rem 0;border-top:1px solid var(--line)}
+.proofs li:last-child{border-bottom:1px solid var(--line)}
+.proofs b{font-weight:400;display:block;font:400 11px/1.4 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--brass);margin-bottom:.45rem}
+.proofs p{font-size:16px;margin:0}
+.proofs a{color:var(--ink);text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--brass)}
+
+/* ---------- azione ---------- */
+.cta{display:block;text-align:center;background:var(--btn);color:var(--btnink);font:500 16px/1 var(--sans);letter-spacing:.01em;text-decoration:none;padding:1.12rem 1rem;border-radius:3px;margin-top:1.7rem;text-shadow:none}
+.cta.ghost{background:none;color:var(--ink);border:1px solid var(--line)}
+.alt{font:400 13.5px/1.6 var(--sans);color:var(--dim);margin-top:1rem}
+.alt a{text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--brass)}
+
+/* ---------- pulled quote ---------- */
+.pull{font-size:clamp(1.5rem,6.2vw,2.15rem);line-height:1.16;letter-spacing:-.015em;text-wrap:balance}
+.pull + .pull{margin-top:1.1rem}
+
+footer{padding:2.6rem 0 3.4rem;border-top:1px solid var(--line);font:400 12.5px/1.65 var(--sans);color:var(--dim)}
+footer p{max-width:33rem}
+
+/* ---------- lingua ---------- */
+.lang{position:absolute;z-index:4;top:1rem;right:1.35rem;font:400 11px/1 var(--sans);letter-spacing:.14em;color:rgba(242,236,225,.62)}
+.lang button{background:none;border:0;color:inherit;font:inherit;cursor:pointer;padding:.35rem .1rem}
+.lang button[aria-pressed=true]{color:#fff;text-decoration:underline;text-underline-offset:4px}
+
+@media (min-width:760px){
+  body{font-size:18px}
+  .plate .wrap{padding-bottom:3rem}
+  .block{padding:5.5rem 0}
+}
+/* la comparsa si attiva solo se JS c'e': senza JS il testo e' subito leggibile */
+@media (prefers-reduced-motion:no-preference){
+  .js .fade{opacity:0;transform:translateY(10px);transition:opacity .7s ease,transform .7s ease}
+  .js .fade.in{opacity:1;transform:none}
+}
+
+/* ====== PLACEHOLDER FOTOGRAFICI (solo prototipo) ====== */
+/* alba sull'acqua */
+.ph1{background:
+  radial-gradient(58% 34% at 46% 40%, rgba(255,214,150,.72), transparent 66%),
+  radial-gradient(120% 60% at 50% 44%, rgba(196,158,116,.38), transparent 70%),
+  linear-gradient(180deg,#3d4c5a 0%,#5d6470 26%,#8f8271 44%,#3a4048 56%,#1b2129 76%,#0b0f13 100%)}
+/* carta stampata, luce di finestra radente */
+.ph2{background:
+  radial-gradient(64% 74% at 34% 30%, rgba(255,244,216,.86), transparent 62%),
+  linear-gradient(150deg,#6b6255 0%,#463f36 46%,#221f1a 78%,#0f0d0b 100%)}
+/* ritratto: luce laterale su fondo scuro */
+.ph3{background:
+  radial-gradient(40% 46% at 63% 33%, rgba(240,219,183,.66), transparent 68%),
+  radial-gradient(70% 60% at 18% 74%, rgba(72,92,84,.55), transparent 72%),
+  linear-gradient(165deg,#3a3b34 0%,#25261f 44%,#12130f 76%,#080805 100%)}
+/* retro, sei del mattino: corridoio, luce fredda in fondo */
+.ph4{background:
+  radial-gradient(30% 40% at 76% 34%, rgba(226,232,226,.60), transparent 68%),
+  linear-gradient(200deg,#454741 0%,#2c2e29 42%,#171815 72%,#0a0b09 100%)}
+/* tavola apparecchiata, luce calda del mattino */
+.ph5{background:
+  radial-gradient(56% 46% at 28% 26%, rgba(255,240,206,.80), transparent 64%),
+  radial-gradient(60% 50% at 82% 70%, rgba(160,132,96,.42), transparent 72%),
+  linear-gradient(170deg,#6d6252 0%,#443c31 44%,#221e18 76%,#0e0c0a 100%)}
+/* scrivania, carta e taccuino, luce zenitale */
+.ph6{background:
+  radial-gradient(52% 44% at 62% 28%, rgba(228,220,200,.56), transparent 66%),
+  linear-gradient(190deg,#4a4941 0%,#2f2f29 44%,#191916 74%,#0a0a09 100%)}
+/* veranda, sera, lampada calda */
+.ph7{background:
+  radial-gradient(34% 30% at 34% 34%, rgba(255,196,110,.82), transparent 66%),
+  radial-gradient(90% 66% at 78% 82%, rgba(52,66,62,.62), transparent 74%),
+  linear-gradient(175deg,#4b3a26 0%,#2e2417 44%,#171410 74%,#080806 100%)}
+</style>
+</head>
+<body>
+
+<!-- ============ 1. APERTURA ============ -->
+<section class="plate tall">
+  <div class="shot ph1"></div><div class="scrim"></div>
+  <span class="slug">Foto 1 — laguna dal transfer, 5:40</span>
+  <div class="lang">
+    <button id="b-it" aria-pressed="true">IT</button> /
+    <button id="b-en" aria-pressed="false">EN</button>
+  </div>
+  <div class="wrap">
+    <p class="eyebrow">Mattia Ferro</p>
+
+    <h1 class="it"><span class="q">&laquo;Innovatore del turismo italiano di alta gamma&raquo;</span></h1>
+    <h1 class="en" hidden><span class="q">&laquo;An innovator in Italian high end tourism&raquo;</span></h1>
+
+    <p class="byline it">Forbes Life, edizione cartacea, maggio 2026, pagina 161. Firma di Mirko Crocoli.</p>
+    <p class="byline en" hidden>Forbes Life, print edition, May 2026, page 161, by Mirko Crocoli.</p>
+
+    <p class="claim it">Progetto viaggi. Italia, Stati Uniti, Golfo.</p>
+    <p class="claim en" hidden>I plan travel. Italy, the United States, the Gulf.</p>
+
+    <a class="cta it" href="https://wa.me/393297647959?text=Ciao%20Mattia%2C%20vorrei%20parlare%20di%20un%20viaggio.">Scrivimi su WhatsApp</a>
+    <a class="cta en" hidden href="https://wa.me/393297647959?text=Hello%20Mattia%2C%20I%20would%20like%20to%20talk%20about%20a%20trip.">Write to me on WhatsApp</a>
+
+    <p class="cap it">Cavallino-Treporti, 5:40. Il transfer per Venezia parte prima che si svegli la strada.</p>
+    <p class="cap en" hidden>Cavallino-Treporti, 5:40. The boat to Venice leaves before the road wakes up.</p>
+  </div>
+</section>
+
+<!-- ============ 2. LE PROVE ============ -->
+<section class="plate short">
+  <div class="shot ph2"></div><div class="scrim"></div>
+  <span class="slug">Foto 2 — Forbes Life aperta a pagina 161</span>
+  <div class="wrap">
+    <p class="cap it" style="margin-top:0">La rivista, aperta. Quella pagina online non esiste.</p>
+    <p class="cap en" hidden style="margin-top:0">The magazine, open. That page does not exist online.</p>
+  </div>
+</section>
+
+<section class="block b2">
+  <div class="wrap fade">
+    <h2 class="it">Le prove</h2>
+    <h2 class="en" hidden>The proof</h2>
+
+    <p class="big it">Tre cose che puoi verificare da solo, adesso, prima di scrivermi.</p>
+    <p class="big en" hidden>Three things you can check yourself, right now, before you write to me.</p>
+
+    <ul class="proofs">
+      <li>
+        <b>Forbes Italia &middot; 14.07.2025</b>
+        <p class="it">Ha scritto della struttura e l'ha definita &laquo;la prima struttura italiana a 5 stelle di questo genere&raquo;. <a href="https://forbes.it/2025/07/14/luxury-camp-lesperienza-esclusiva-delle-vacanze-allaria-aperta">L'articolo &egrave; qui.</a></p>
+        <p class="en" hidden>Wrote about the property and called it &laquo;the first Italian five star property of its kind&raquo;. <a href="https://forbes.it/2025/07/14/luxury-camp-lesperienza-esclusiva-delle-vacanze-allaria-aperta">The article is here.</a></p>
+      </li>
+      <li>
+        <b>Forbes Life &middot; carta &middot; 05.2026 &middot; p.161</b>
+        <p class="it">Firma di Mirko Crocoli. &Egrave; la rivista fotografata qui sopra: online non la trovi, e infatti te la faccio vedere invece di raccontartela.</p>
+        <p class="en" hidden>By Mirko Crocoli. It is the magazine photographed above: you will not find it online, so I show it to you instead of telling you about it.</p>
+      </li>
+      <li>
+        <b>Fora Travel &middot; New York</b>
+        <p class="it">Sono travel advisor di livello Pro con Fora Travel, l'agenzia che esegue le prenotazioni: <a href="https://www.foratravel.com/advisor/mattia-ferro">il badge Pro &egrave; pubblicato sul mio profilo</a>. Fora fa parte del <a href="https://www.virtuoso.com/advisor/mattferr74504">network Virtuoso</a>, ed &egrave; da l&igrave; che arrivano i vantaggi che ricevi in hotel.</p>
+        <p class="en" hidden>I am a Pro level travel advisor with Fora Travel, the agency that makes the bookings: <a href="https://www.foratravel.com/advisor/mattia-ferro">the Pro badge is published on my profile</a>. Fora is a member agency of the <a href="https://www.virtuoso.com/advisor/mattferr74504">Virtuoso network</a>, and that is where your hotel benefits come from.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 3. CHI SCRIVE ============ -->
+<section class="plate tall">
+  <div class="shot ph3"></div><div class="scrim"></div>
+  <span class="slug">Foto 3 — ritratto in veranda, prima luce</span>
+  <div class="wrap">
+    <div class="fade">
+      <h2 class="it">Chi scrive</h2>
+      <h2 class="en" hidden>Who is writing</h2>
+
+      <p class="pull it">Ho studiato l'alta gamma nel mondo.<br>Poi l'ho costruita.<br>Poi l'ho gestita per otto anni.<br><span class="dim">Adesso progetto viaggi.</span></p>
+      <p class="pull en" hidden>I studied luxury around the world.<br>Then I built it.<br>Then I ran it for eight years.<br><span class="dim">Now I plan travel.</span></p>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap fade">
+    <div class="it">
+      <p>Ho fondato il Luxury Camp at Union Lido, a Cavallino-Treporti, nel 2018, e da allora lo gestisco. Venti suite open air, circa seicento famiglie l'anno da Germania, Austria, Stati Uniti, Emirati e Cina.</p>
+      <p>Prima di progettarlo ho passato anni dentro le strutture degli altri. Dubai, Las Vegas, Shanghai. Ricerca su come sono gestiti davvero i migliori alberghi del mondo, non su come vengono fotografati.</p>
+      <p>Mio zio &egrave; stato Concierge Chiavi d'Oro al Belmond Hotel Cipriani di Venezia per trent'anni. Quello che mi &egrave; rimasto non sono gli ospiti famosi. &Egrave; che trattava uno sconosciuto che chiedeva un'indicazione esattamente come trattava un ospite del Cipriani.</p>
+    </div>
+    <div class="en" hidden>
+      <p>I founded Luxury Camp at Union Lido, in Cavallino-Treporti, in 2018, and I have run it since. Twenty open air suites, around six hundred families a year from Germany, Austria, the United States, the Gulf and China.</p>
+      <p>Before designing it I spent years inside other people's properties. Dubai, Las Vegas, Shanghai. Research into how the best hotels in the world are actually run, not how they photograph.</p>
+      <p>My uncle was a Golden Keys concierge at the Belmond Hotel Cipriani in Venice for thirty years. What stayed with me was not the famous guests. It was that he treated a stranger asking for directions exactly as he treated a Cipriani guest.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4. COME GUARDO UN POSTO ============ -->
+<section class="plate">
+  <div class="shot ph4"></div><div class="scrim"></div>
+  <span class="slug">Foto 4 — retro, sei del mattino, prima del servizio</span>
+  <div class="wrap">
+    <div class="fade">
+      <h2 class="it">Come guardo un posto</h2>
+      <h2 class="en" hidden>How I read a place</h2>
+
+      <p class="big it">Chi c'&egrave; alla reception. Da quanti anni ci lavora. Se la stagione dopo ritrovi le stesse facce. Se chi &egrave; in sala pu&ograve; dirti di s&igrave; senza chiedere il permesso a qualcuno di sopra.</p>
+      <p class="big en" hidden>Who is at the desk. How many years they have been there. Whether the same faces come back next season. Whether someone on the floor can say yes without asking upstairs.</p>
+
+      <p class="it" style="margin-top:1.15rem">Un posto che si prende cura di chi ci lavora si prender&agrave; cura di te anche il quinto giorno, non solo il primo. Non lo dice nessuna fotografia, ed &egrave; la parte che poi ti resta.</p>
+      <p class="en" hidden style="margin-top:1.15rem">A place that takes care of the people who work in it will still be taking care of you on the fifth day, not only the first. No photograph says that, and it is the part you actually remember.</p>
+
+      <p class="cap it">Le sei del mattino, prima che apra la colazione. &Egrave; l'ora in cui una struttura si vede per quello che &egrave;.</p>
+      <p class="cap en" hidden>Six in the morning, before breakfast opens. That is the hour when a property shows what it really is.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 5. NOTA SULLE FOTOGRAFIE ============ -->
+<section class="block b2">
+  <div class="wrap fade">
+    <h2 class="it">Le fotografie di questa pagina</h2>
+    <h2 class="en" hidden>The photographs on this page</h2>
+
+    <div class="it">
+      <p>Le ho scattate io, nei posti dove ho lavorato o che sono andato a vedere. Non c'&egrave; la facciata di un albergo che non &egrave; mio, non c'&egrave; una destinazione comprata da un archivio, non c'&egrave; il volto di un ospite.</p>
+      <p class="pull" style="margin:1.6rem 0">Non ti mostro dove ti mando.<br>Ti mostro come guardo.</p>
+      <p>L'albergo lo sceglieremo insieme, dopo, e saprai perch&eacute;. Una pagina piena di camere che non ho costruito direbbe solo che so comprare le immagini.</p>
+    </div>
+    <div class="en" hidden>
+      <p>I took them myself, in places where I have worked or that I went to inspect. There is no façade of a hotel that is not mine, no destination bought from a picture library, no guest's face.</p>
+      <p class="pull" style="margin:1.6rem 0">I am not showing you where I send you.<br>I am showing you how I look.</p>
+      <p>We will choose the hotel together, later, and you will know why. A page full of rooms I did not build would only prove that I know how to buy pictures.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 6. COSA CAMBIA PER TE ============ -->
+<section class="plate">
+  <div class="shot ph5"></div><div class="scrim"></div>
+  <span class="slug">Foto 5 — colazione apparecchiata prima del primo ospite</span>
+  <div class="wrap">
+    <div class="fade">
+      <h2 class="it">Cosa cambia per te</h2>
+      <h2 class="en" hidden>What changes for you</h2>
+
+      <p class="big it">Paghi la tariffa dell'albergo. Non si aggiunge niente perch&eacute; la prenotazione passa da me.</p>
+      <p class="big en" hidden>You pay the hotel's own rate. Nothing is added because the booking came through me.</p>
+
+      <p class="cap it">La colazione apparecchiata quaranta minuti prima che arrivi il primo ospite.</p>
+      <p class="cap en" hidden>Breakfast laid out forty minutes before the first guest arrives.</p>
+    </div>
+  </div>
+</section>
+
+<section class="block tight">
+  <div class="wrap fade">
+    <div class="it">
+      <p>Nelle strutture che aderiscono ai programmi con cui lavoro, dentro quella stessa tariffa rientrano spesso l'upgrade quando c'&egrave; disponibilit&agrave;, la colazione, un credito da spendere in struttura, l'uscita posticipata. Quali valgano, e dove, te lo scrivo prima di prenotare. Non ti prometto una colazione che poi non c'&egrave;.</p>
+      <p><strong>A chi ha gi&agrave; dormito al Luxury Camp at Union Lido la progettazione &egrave; inclusa.</strong></p>
+    </div>
+    <div class="en" hidden>
+      <p>At properties that take part in the programmes I work with, that same rate often already includes a room upgrade when one is available, breakfast, a credit to spend on property, a later check out. Which of these apply, and where, I write to you before booking. I do not promise you a breakfast that then is not there.</p>
+      <p><strong>If you have already slept at Luxury Camp at Union Lido, the planning is included.</strong></p>
+    </div>
+
+    <a class="cta ghost it" href="https://wa.me/393297647959?text=Ciao%20Mattia%2C%20vorrei%20parlare%20di%20un%20viaggio.">Scrivimi su WhatsApp</a>
+    <a class="cta ghost en" hidden href="https://wa.me/393297647959?text=Hello%20Mattia%2C%20I%20would%20like%20to%20talk%20about%20a%20trip.">Write to me on WhatsApp</a>
+  </div>
+</section>
+
+<!-- ============ 7. COME MI PAGO ============ -->
+<section class="plate">
+  <div class="shot ph6"></div><div class="scrim"></div>
+  <span class="slug">Foto 6 — itinerario stampato e taccuino, nessun dato leggibile</span>
+  <div class="wrap">
+    <div class="fade">
+      <h2 class="it">Come mi pago</h2>
+      <h2 class="en" hidden>How I get paid</h2>
+
+      <p class="big it">Il compenso me lo pagano le strutture, con una commissione sul soggiorno. Non tu.</p>
+      <p class="big en" hidden>The properties pay me a commission on the stay. Not you.</p>
+
+      <p class="cap it">Un itinerario di undici giorni fra Emirati e Oman. Prima versione, gennaio.</p>
+      <p class="cap en" hidden>An eleven day itinerary across the Emirates and Oman. First draft, January.</p>
+    </div>
+  </div>
+</section>
+
+<section class="block tight">
+  <div class="wrap fade">
+    <div class="it">
+      <p>Vuol dire che il mio guadagno dipende da dove ti mando, e devi saperlo prima di scrivermi, non dopo. Per gli itinerari complessi pu&ograve; esserci un onorario di progettazione: te lo dico prima di cominciare, mai a lavoro fatto.</p>
+      <p>Siccome funziona cos&igrave;, l'unica prova che puoi chiedermi &egrave; che ti dica di no. Un consulente che non scarta mai niente non sta lavorando per te.</p>
+    </div>
+    <div class="en" hidden>
+      <p>It means my income depends on where I send you, and you should know that before you write to me, not after. For complex itineraries there may be a planning fee: I tell you before we start, never once the work is done.</p>
+      <p>Because it works that way, the only proof you can ask of me is that I tell you no. An advisor who never turns anything down is not working for you.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 8. PARLIAMONE ============ -->
+<section class="plate tall">
+  <div class="shot ph7"></div><div class="scrim"></div>
+  <span class="slug">Foto 7 — la lettera A5 sul tavolo della veranda, sera</span>
+  <div class="wrap">
+    <div class="fade">
+      <h2 class="it">Parliamone</h2>
+      <h2 class="en" hidden>Let's talk</h2>
+
+      <p class="pull it">Rispondo io.</p>
+      <p class="pull en" hidden>I answer my own messages.</p>
+
+      <p class="it" style="margin-top:1.2rem">Si comincia da una conversazione di venti minuti. Non c'&egrave; niente da decidere adesso e nessun obbligo di prenotare. Dimmi dove stai pensando di andare e in che periodo.</p>
+      <p class="en" hidden style="margin-top:1.2rem">It starts with a conversation of about twenty minutes. There is nothing to decide now and no obligation to book. Tell me where you are thinking of going and roughly when.</p>
+
+      <a class="cta it" href="https://wa.me/393297647959?text=Ciao%20Mattia%2C%20ho%20letto%20la%20lettera%20in%20suite.%20Vorrei%20parlare%20di%20un%20viaggio.">Scrivimi su WhatsApp</a>
+      <a class="cta en" hidden href="https://wa.me/393297647959?text=Hello%20Mattia%2C%20I%20read%20the%20letter%20in%20the%20suite.%20I%20would%20like%20to%20talk%20about%20a%20trip.">Write to me on WhatsApp</a>
+
+      <p class="alt it">Se non usi WhatsApp: <a href="mailto:mattia@mattiaferro.com">mattia@mattiaferro.com</a></p>
+      <p class="alt en" hidden>If you do not use WhatsApp: <a href="mailto:mattia@mattiaferro.com">mattia@mattiaferro.com</a></p>
+
+      <p class="cap it">La lettera che hai trovato in suite. Da l&igrave; sei probabilmente arrivato fin qui.</p>
+      <p class="cap en" hidden>The letter you found in the suite. That is probably how you got here.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p class="it">La progettazione dei viaggi &egrave; un servizio personale di Mattia Ferro. Non &egrave; un servizio della struttura. Le prenotazioni sono eseguite da Fora Travel Inc., New York. Tutte le fotografie sono di Mattia Ferro / Vimana Holdings. Luxury Camp at Union Lido, Via Fausta 258, 30013 Cavallino-Treporti (VE), Italia.</p>
+    <p class="en" hidden>Travel planning is a personal service of Mattia Ferro. It is not a service of the property. Bookings are made by Fora Travel Inc., New York. All photographs by Mattia Ferro / Vimana Holdings. Luxury Camp at Union Lido, Via Fausta 258, 30013 Cavallino-Treporti (VE), Italy.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var bit=document.getElementById('b-it'),ben=document.getElementById('b-en');
+  function set(l){
+    var it=l==='it';
+    document.querySelectorAll('.it').forEach(function(n){n.hidden=!it});
+    document.querySelectorAll('.en').forEach(function(n){n.hidden=it});
+    bit.setAttribute('aria-pressed',it); ben.setAttribute('aria-pressed',!it);
+    document.documentElement.lang=l;
+    try{localStorage.setItem('lang',l)}catch(e){}
+  }
+  bit.onclick=function(){set('it')}; ben.onclick=function(){set('en')};
+  try{var s=localStorage.getItem('lang'); if(s) set(s);}catch(e){}
+
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})
+    },{rootMargin:'0px 0px -8% 0px'});
+    document.querySelectorAll('.fade').forEach(function(n){io.observe(n)});
+  } else {
+    document.querySelectorAll('.fade').forEach(function(n){n.classList.add('in')});
+  }
+})();
+</script>
+</body>
+</html>
