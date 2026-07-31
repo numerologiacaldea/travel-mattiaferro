@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mattia Ferro, Travel Advisor</title>
+<meta name="description" content="Ich habe die besten Hotels der Welt studiert, dann eines gebaut, und ich führe es seit acht Jahren. Heute plane ich auch die Reisen anderer.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://travel.mattiaferro.com/de/">
+<link rel="alternate" hreflang="it" href="https://travel.mattiaferro.com/">
+<link rel="alternate" hreflang="en" href="https://travel.mattiaferro.com/en/">
+<link rel="alternate" hreflang="de" href="https://travel.mattiaferro.com/de/">
+<link rel="alternate" hreflang="x-default" href="https://travel.mattiaferro.com/en/">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Mattia Ferro, Travel Advisor">
+<meta property="og:description" content="Ich habe die besten Hotels der Welt studiert. Dann habe ich eines gebaut. Ich führe es seit acht Jahren.">
+<meta property="og:url" content="https://travel.mattiaferro.com/de/">
+<meta property="og:image" content="https://travel.mattiaferro.com/assets/og.jpg">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<style>
+:root{
+  --ink:#14130f; --ink-2:#3f3d36; --soft:#57544c; --line:#ded9cd;
+  --bg:#faf7f1; --bg-2:#f2ede3; --dark:#14130f; --ivory:#f5f0e6; --brass:#9a7b3f; --brass-text:#7d6233; --brass-dark:#c9a45f;
+  --w:38rem;
+}
+@media (prefers-color-scheme:dark){
+  :root{--ink:#efece4; --ink-2:#cfcbc1; --soft:#98948a; --line:#2f2d28;
+        --bg:#121110; --bg-2:#1a1917; --dark:#0b0a09; --brass:#c9a45f; --brass-text:#c9a45f; --brass-dark:#c9a45f;}
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);
+  font:400 17px/1.68 "Iowan Old Style",Georgia,"Times New Roman",serif}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-underline-offset:3px}
+
+.wrap{max-width:var(--w);margin:0 auto;padding:0 1.35rem}
+.sec{padding:3.4rem 0}
+.sec+.sec{border-top:1px solid var(--line)}
+
+.kicker{font:500 11.5px/1.4 system-ui,sans-serif;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--soft);margin-bottom:1.1rem}
+h1{font-size:clamp(1.72rem,7vw,2.4rem);line-height:1.16;font-weight:400;letter-spacing:-.01em}
+h2{font-size:clamp(1.32rem,5vw,1.7rem);line-height:1.25;font-weight:400;margin-bottom:1rem}
+p{margin-bottom:1.05rem}
+p:last-child{margin-bottom:0}
+strong{font-weight:600}
+
+/* apertura */
+.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;
+  justify-content:flex-end;background:var(--dark);overflow:hidden}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  object-position:62% 20%}
+.hero-shade{position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(10,9,8,.92) 0%,rgba(10,9,8,.62) 34%,rgba(10,9,8,.12) 68%,rgba(10,9,8,.3) 100%)}
+.hero-in{position:relative;padding:0 1.35rem 2.6rem;max-width:var(--w);margin:0 auto;width:100%}
+.hero .kicker{color:rgba(245,240,230,.72)}
+.hero h1{color:var(--ivory)}
+.hero h1 span{display:block}
+.hero-sub{color:rgba(245,240,230,.86);margin:1rem 0 1.6rem;font-size:1.06rem}
+.hero-note{font:400 13.5px/1.5 system-ui,sans-serif;color:rgba(245,240,230,.66);margin-top:.75rem}
+.lang{position:absolute;top:0;right:0;padding:1rem 1.35rem;z-index:2}
+.lang a{font:500 12px/1 system-ui,sans-serif;letter-spacing:.1em;text-transform:uppercase;
+  color:rgba(245,240,230,.82);text-decoration:none;display:inline-block;padding:16px 4px}
+
+/* pulsante */
+.cta{display:inline-block;background:var(--ivory);color:#14130f;
+  font:500 16px/1 system-ui,sans-serif;text-decoration:none;
+  padding:1.05rem 1.7rem;border-radius:2px}
+.sec .cta{background:var(--ink);color:var(--bg)}
+.cta-row{margin-top:1.8rem}
+
+/* fascia scura */
+.band{background:var(--dark);color:var(--ivory);padding:3.4rem 0}
+.band .kicker{color:rgba(245,240,230,.6)}
+.band a{color:var(--brass-dark)}
+.quote{font-size:clamp(1.3rem,5.4vw,1.66rem);line-height:1.3;margin-bottom:1rem}
+.attrib{font:400 13.5px/1.55 system-ui,sans-serif;color:rgba(245,240,230,.68);margin-bottom:1.8rem}
+.band p{color:rgba(245,240,230,.9)}
+.rule-brass{width:44px;height:2px;background:var(--brass);border:0;margin:0 0 1.4rem}
+
+/* immagini */
+figure{margin:1.8rem 0}
+figcaption{font:400 13px/1.5 system-ui,sans-serif;color:var(--soft);margin-top:.6rem}
+.ph{background:var(--bg-2);border:1px dashed var(--line);border-radius:2px;
+  display:flex;align-items:center;justify-content:center;text-align:center;
+  padding:1.6rem 1.2rem;min-height:0}
+.ph span{font:400 12.5px/1.55 system-ui,sans-serif;color:var(--soft);max-width:24rem}
+.ph.r45{aspect-ratio:3/2}
+.ph.r11{aspect-ratio:1/1;width:70%}
+.band .ph{background:rgba(245,240,230,.06);border-color:rgba(245,240,230,.22)}
+.band .ph span{color:rgba(245,240,230,.6)}
+
+/* elenchi e blocchi */
+.steps{list-style:none;counter-reset:s}
+.steps li{counter-increment:s;position:relative;padding-left:2.1rem;margin-bottom:1.1rem}
+.steps li::before{content:counter(s);position:absolute;left:0;top:.08em;
+  font:500 13px/1 system-ui,sans-serif;color:var(--brass-text);
+  border:1px solid var(--brass-text);border-radius:50%;width:22px;height:22px;
+  display:flex;align-items:center;justify-content:center}
+.lbl{font:500 11.5px/1.4 system-ui,sans-serif;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--brass-text);margin-bottom:.35rem}
+.blk{margin-bottom:1.5rem}
+.pull{font-size:1.12rem;border-left:2px solid var(--brass);padding-left:1rem;margin:1.5rem 0}
+.colophon{font:400 12.5px/1.6 system-ui,sans-serif;color:var(--soft);
+  border-top:1px solid var(--line);padding-top:.9rem;margin-top:2rem}
+.src{font-size:.95rem;color:var(--ink-2)}
+
+.form{margin-top:1.4rem}
+.form label{display:block;font:500 13px/1.4 system-ui,sans-serif;color:var(--soft);
+  letter-spacing:.04em;margin-bottom:1rem}
+.form input[type=text],.form input[type=email]{display:block;width:100%;margin-top:.4rem;
+  padding:.85rem 1rem;font:400 16px/1.4 system-ui,sans-serif;color:var(--ink);
+  background:var(--bg-2);border:1px solid var(--line);border-radius:2px}
+.form input:focus{outline:2px solid var(--brass);outline-offset:1px}
+.form .check{display:flex;gap:.6rem;align-items:flex-start;font-weight:400;
+  text-transform:none;letter-spacing:0;line-height:1.5}
+.form .check input{margin-top:.2em}
+.form .cta{border:0;cursor:pointer;width:100%;margin-top:.4rem}
+.opz{text-transform:none;letter-spacing:0;font-weight:400}
+.note{font:400 13.5px/1.6 system-ui,sans-serif;color:var(--soft);margin-top:1.1rem}
+.rev{margin:1.6rem 0;border-left:2px solid var(--brass);padding-left:1.1rem}
+.rev p{font-size:1.05rem;line-height:1.65;margin-bottom:.5rem}
+.rev footer{font:400 13px/1.5 system-ui,sans-serif;color:var(--soft)}
+.nomi-riga{font:400 14px/1.7 system-ui,sans-serif;color:var(--soft);margin-top:1.8rem}
+.nomi{font-size:1.05rem;line-height:1.9;border-left:2px solid var(--brass);padding-left:1rem}
+footer{background:var(--bg-2);padding:2.4rem 0 3rem;
+  font:400 12.5px/1.7 system-ui,sans-serif;color:var(--soft)}
+footer p{margin-bottom:.5rem}
+
+@media (min-width:46rem){
+  body{font-size:18px}
+  .sec{padding:4.4rem 0}
+  .hero-img{left:auto;right:0;width:46%;object-position:62% 22%}
+  .hero-shade{background:
+    linear-gradient(to right, var(--dark) 54%, rgba(10,9,8,0) 78%),
+    linear-gradient(to top, rgba(10,9,8,.5) 0%, rgba(10,9,8,0) 38%)}
+  .hero-in{margin:0;max-width:none;width:56%;padding:0 2rem 4.6rem clamp(2rem,7vw,6.5rem)}
+  .hero-in h1{max-width:30rem}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <picture><source srcset="/assets/hero.webp" type="image/webp"><img class="hero-img" src="/assets/hero.jpg" width="1170" height="1560" fetchpriority="high" alt="Mattia Ferro auf einem Wassertaxi in der Lagune von Venedig."></picture>
+  <div class="hero-shade"></div>
+  <nav class="lang"><a href="/en/" hreflang="en">English</a> <a href="/" hreflang="it">Italiano</a></nav>
+  <div class="hero-in">
+    <p class="kicker">Mattia Ferro · Cavallino-Treporti, Venedig</p>
+    <h1><span>Ich habe die besten Hotels der Welt studiert.</span><span>Dann habe ich eines gebaut.</span><span>Ich führe es seit acht Jahren.</span></h1>
+    <p class="hero-sub">Heute plane ich auch die Reisen anderer. Italien, die USA, der Golf.</p>
+    <a class="cta" href="#contatto">Hinterlassen Sie hier Ihre E-Mail</a>
+    <p class="hero-note">Es antwortet das Team des Luxury Camp at Union Lido. Den Vorschlag unterschreibe ich.</p>
+  </div>
+</header>
+
+<section class="band">
+  <div class="wrap">
+    <p class="kicker">Wer es sagt</p>
+    <hr class="rule-brass">
+    <p class="quote">«Innovatore del turismo italiano di alta gamma»</p>
+    <p class="attrib">Ein Innovator des italienischen Spitzentourismus. Mirko Crocoli, Forbes Life, Printausgabe, Mai 2026, Seite 161.</p>
+    <figure>
+      <picture><source srcset="/assets/forbes-161.webp" type="image/webp"><img src="/assets/forbes-161.jpg" width="720" height="947" loading="lazy" alt="Seite 161 von Forbes Life, Mai 2026, mit dem Interview mit Mattia Ferro von Mirko Crocoli."></picture>
+      <figcaption>Diese Seite existiert nur auf Papier. Hier ist sie.</figcaption>
+    </figure>
+    <p>Diese hier können Sie sofort öffnen. Forbes Italia schrieb am 14. Juli 2025 über das Haus und nannte es «la prima struttura italiana a 5 stelle di questo genere», das erste italienische Fünf-Sterne-Haus seiner Art. <a href="https://forbes.it/2025/07/14/luxury-camp-lesperienza-esclusiva-delle-vacanze-allaria-aperta">Zum Artikel.</a></p>
+    <p>Und am 31. Juli 2026 erzählte <a href="https://tg24.sky.it/lifestyle/2026/07/31/turismo-lusso-torna-consulente-viaggio">Sky TG24</a> von der Rückkehr des Reiseberaters im Luxustourismus, mit dem Virtuoso-Netzwerk und meiner Arbeit darin: «Finché non ho dovuto costruire un albergo, di un hotel vedevo soltanto metà delle cose». Bis ich ein Hotel bauen musste, sah ich von einem Hotel nur die Hälfte.</p>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <p class="kicker">Was jetzt zu tun ist</p>
+    <p>Wenn Sie an eine Reise denken, auch vage, auch in sechs Monaten: <strong>hinterlassen Sie unten Ihre E-Mail, und ich melde mich bei Ihnen</strong> für zwanzig Minuten Gespräch. Es gibt nichts zu entscheiden und nichts zu bezahlen.</p>
+    <p class="cta-row"><a class="cta" href="#contatto">Hier Ihre E-Mail hinterlassen</a></p>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <p class="kicker">Die Methode</p>
+    <h2>Wie ich ein Hotel lese</h2>
+    <p>Ein Hotel beurteilt man nicht nach Fotografien. Man beurteilt es nach den Menschen, die dort arbeiten. Die vier Dinge, die ich für Sie prüfe, sind dieselben, die ich hier jeden Morgen prüfe, von der anderen Seite des Empfangs.</p>
+    <ol class="steps">
+      <li><strong>Wer am Empfang steht.</strong> Ich frage, seit wie vielen Jahren er dort arbeitet. Die Antwort sagt mehr als die deklarierte Kategorie.</li>
+      <li><strong>Ob die Gesichter wiederkommen.</strong> In der nächsten Saison finden Sie dieselben Menschen wieder, oder nicht. Kein Hotel schreibt das in seine eigene Präsentation.</li>
+      <li><strong>Wer Ja sagen darf.</strong> Wenn niemand im Service etwas entscheidet, ohne oben zu fragen, spüren Sie es am fünften Tag.</li>
+      <li><strong>Was passiert, wenn etwas schiefgeht.</strong> Das Niveau eines Hauses zeigt sich nicht bei der Ankunft. Es zeigt sich dort.</li>
+    </ol>
+    <p>Es ist der Teil, den Fotografien nie erzählen, und der Teil, der Ihnen bleibt.</p>
+    <p class="cta-row"><a class="cta" href="#contatto">Hier Ihre E-Mail hinterlassen</a></p>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <p class="kicker">Wer hier schreibt</p>
+    <p>Ich habe das Luxury Camp at Union Lido 2018 gegründet und führe es seitdem. Zwanzig Open-Air-Suiten, rund sechshundert Familien im Jahr aus Deutschland, Österreich, den USA, den Emiraten und China.</p>
+    <p>Bevor ich es entwarf, verbrachte ich Jahre in den Häusern anderer. Dubai, Las Vegas, Shanghai. Recherche darüber, wie die besten Hotels der Welt wirklich geführt werden, nicht wie sie fotografiert werden.</p>
+    <p class="src">Ich sagte es Italiabsolutely am 1. September 2022, bevor es ein Verkaufsargument wurde: «For Luxury Camp we did years of market research into the world's best 5-star superior to 7-star hotels from Dubai to Las Vegas to Shanghai, to which we added our personal Italian warmth and style».</p>
+    <figure>
+      <picture><source srcset="/assets/venezia.webp" type="image/webp"><img src="/assets/venezia.jpg" width="1400" height="933" loading="lazy" alt="Der Canal Grande in Venedig bei Sonnenuntergang, mit der Basilika Santa Maria della Salute."></picture>
+      <figcaption>Venedig. Eine halbe Stunde mit dem Boot von meinem Arbeitsplatz.</figcaption>
+    </figure>
+    <p>Mein Onkel, Roberto Senigaglia, war dreißig Jahre lang Concierge Clefs d'Or im Belmond Hotel Cipriani in Venedig. Was mir geblieben ist, sind nicht die berühmten Gäste. Es ist, dass er einen Fremden, der nach dem Weg fragte, genauso behandelte wie einen Gast des Cipriani.</p>
+    <p class="colophon">Haus eröffnet 2018 · 20 Open-Air-Suiten · rund 600 Familien im Jahr · Saison von April bis September</p>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <p class="kicker">Was passiert, wenn Sie schreiben</p>
+    <ol class="steps">
+      <li><strong>Es antwortet das Team des Luxury Camp at Union Lido</strong>, meist noch am selben Tag. Jede Anfrage geht über meinen Tisch.</li>
+      <li><strong>Zwanzig Minuten Gespräch</strong>, wann es Ihnen passt. Dort wird nichts entschieden.</li>
+      <li><strong>Ein Vorschlag mit zwei Alternativen</strong> und dem Grund für jede. Überzeugt Sie keine, beginnen wir von vorn.</li>
+      <li><strong>Die Buchung übernimmt Fora Travel</strong>, die Agentur, mit der ich arbeite. Während der Reise bleibt die Nummer, die Sie anrufen, unsere.</li>
+    </ol>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <p class="kicker">Mit wem ich arbeite</p>
+    <div class="blk">
+      <p class="lbl">Agentur</p>
+      <p>Ich plane und buche über Fora Travel, eine New Yorker Agentur, bei der ich <a href="https://www.foratravel.com/advisor/mattia-ferro">Advisor auf Pro-Niveau</a> bin. Die Zertifizierung, ausgestellt von Fora am 9. Juli 2026, <a href="https://www.foratravel.com/certification?credential=29319607-bedc-4e87-bd8e-bbac78a36589">lässt sich hier überprüfen</a>.</p>
+    </div>
+    <div class="blk">
+      <p class="lbl">Netzwerk</p>
+      <p>Fora ist Teil des <a href="https://www.virtuoso.com/advisor/mattferr74504">Virtuoso-Netzwerks</a>, und daher kommen die Vorteile, die Sie im Hotel erhalten.</p>
+    </div>
+    <div class="blk">
+      <p class="lbl">Haus</p>
+      <p>Luxury Camp at Union Lido, Cavallino-Treporti, eröffnet 2018. Das Team bleibt für Sie da, auch wenn Sie woanders schlafen.</p>
+    </div>
+    <p>Sie zahlen den Zimmerpreis des Hotels. Es kommt nichts hinzu, weil die Buchung über mich läuft. Wo die Programme gelten, enthält derselbe Preis oft schon das Frühstück, ein Guthaben im Haus, das Upgrade bei Verfügbarkeit, den späten Check-out. Welche gelten, und in welchem Hotel, schreibe ich Ihnen vor der Buchung. Ich verspreche Ihnen kein Frühstück, das es dann nicht gibt.</p>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <p class="kicker">Wie ich bezahlt werde</p>
+    <p>Die Hotels bezahlen mich, mit einer Kommission auf den Aufenthalt. Nicht Sie. Das heißt: Was ich verdiene, hängt davon ab, wohin ich Sie schicke, und das sollten Sie wissen, bevor Sie mir schreiben, nicht danach.</p>
+    <p class="pull">Deshalb ist der einzige Beweis, den Sie von mir verlangen können, dass ich Nein sage. Ein Berater, der nie etwas ausschließt, arbeitet nicht für Sie.</p>
+    <p>Wer im Luxury Camp at Union Lido geschlafen hat, zahlt keine Planungsgebühr. Bei komplexen Reiserouten kann eine Gebühr anfallen, und ich sage es Ihnen vorher, nicht am Ende.</p>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <figure>
+      <picture><source srcset="/assets/dubai.webp" type="image/webp"><img src="/assets/dubai.jpg" width="1400" height="933" loading="lazy" alt="Die Skyline von Dubai im Morgenlicht mit dem Burj Khalifa."></picture>
+      <figcaption>Dubai. Einer der Orte, an denen ich studiert habe, wie Spitzenhäuser geführt werden.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <p class="kicker">Die Rezensionen</p>
+    <p class="src">Die Rezensionen unten sprechen über das Haus, das ich entworfen habe, und das Team, das ich ausgewählt habe. Es ist dasselbe Kriterium, mit dem ich Reisen plane.</p>
+    <p><a href="https://www.google.com/maps/place/Luxury+Camp+at+Union+Lido/">4,5 von 5, über 150 Google-Rezensionen</a>. Der Durchschnitt umfasst alle, auch die kritischen: Sie können sie einzeln nachlesen.</p>
+    <blockquote class="rev">
+      <p>«The accommodations are beautifully designed, but what really makes this place special is the incredible team. [...] I couldn't recommend Luxury Camp more highly.»</p>
+      <footer>Scott Eddy, Travel Strategist · Google-Rezension, 5/5</footer>
+    </blockquote>
+    <blockquote class="rev">
+      <p>«I would like to express my gratitude to Nicola and Clemens for their exceptional hosting. [...] The hospitality we experienced was top-notch.»</p>
+      <footer>Ivan Ivanov · Google-Rezension, 5/5</footer>
+    </blockquote>
+    <blockquote class="rev">
+      <p>«Eleganza, raffinatezza, attenzione ai dettagli, contatto con la natura e silenzio regnano sovrani. [...] Rigenerata. Pronta per i prossimi sogni.»</p>
+      <footer>Giorgia Giacobetti · Google-Rezension, 5/5, auf Italienisch</footer>
+    </blockquote>
+    <p class="nomi-riga">Und unter denen, die in den Suiten geschlafen haben, wie von der Presse berichtet: Manuela Arcuri, Valeria Fabrizi, Marco Cesati Cassin, Luca Toni, Tania Cagnotto, Kristian Ghedina, zwei Mitglieder von Jamiroquai.</p>
+  </div>
+</section>
+
+<section class="sec" id="contatto">
+  <div class="wrap">
+    <p class="kicker">Sprechen wir darüber</p>
+    <h2>Hinterlassen Sie hier Ihre E-Mail. Ich melde mich bei Ihnen.</h2>
+    <p>Zwanzig Minuten Gespräch, ohne Verpflichtung und ohne etwas zu entscheiden. Sie sagen mir, wohin Sie denken, ich sage Ihnen, was ich davon halte, von innen heraus.</p>
+    <form class="form" action="https://formsubmit.co/mattia.ferro@fora.travel" method="POST">
+      <input type="hidden" name="_subject" value="Anfrage von travel.mattiaferro.com/de">
+      <input type="hidden" name="_next" value="https://travel.mattiaferro.com/de/danke/">
+      <input type="text" name="_honey" style="display:none">
+      <label>Name<input type="text" name="nome" required autocomplete="name"></label>
+      <label>E-Mail<input type="email" name="email" required autocomplete="email"></label>
+      <label>Wohin denken Sie? <span class="opz">(optional)</span><input type="text" name="destinazione"></label>
+      <label class="check"><input type="checkbox" required> Ich bin einverstanden, dass Mattia Ferro mich zu meiner Anfrage kontaktiert.</label>
+      <button class="cta" type="submit">Ich melde mich bei Ihnen</button>
+    </form>
+    <p class="note">Oder schreiben Sie direkt an <a href="mailto:mattia.ferro@fora.travel">mattia.ferro@fora.travel</a>. Sie können uns gern auf Deutsch schreiben; das Gespräch selbst führen wir auf Englisch oder Italienisch.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>Die Reiseplanung ist eine persönliche Dienstleistung von Mattia Ferro. Buchungen werden von <strong>Fora Travel Inc.</strong>, 228 Park Ave S, New York, NY 10003, abgeschlossen und ausgeführt, einer Agentur des Virtuoso-Netzwerks seit 2018.</p>
+    <p>Kontakt: mattia.ferro@fora.travel · Fotografien: Mattia Ferro; Venedig und Dubai via Unsplash.</p>
+  </div>
+</footer>
+
+</body>
+</html>
