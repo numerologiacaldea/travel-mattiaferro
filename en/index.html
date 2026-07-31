@@ -106,6 +106,20 @@ figcaption{font:400 13px/1.5 system-ui,sans-serif;color:var(--soft);margin-top:.
   border-top:1px solid var(--line);padding-top:.9rem;margin-top:2rem}
 .src{font-size:.95rem;color:var(--ink-2)}
 
+.form{margin-top:1.4rem}
+.form label{display:block;font:500 13px/1.4 system-ui,sans-serif;color:var(--soft);
+  letter-spacing:.04em;margin-bottom:1rem}
+.form input[type=text],.form input[type=email]{display:block;width:100%;margin-top:.4rem;
+  padding:.85rem 1rem;font:400 16px/1.4 system-ui,sans-serif;color:var(--ink);
+  background:var(--bg-2);border:1px solid var(--line);border-radius:2px}
+.form input:focus{outline:2px solid var(--brass);outline-offset:1px}
+.form .check{display:flex;gap:.6rem;align-items:flex-start;font-weight:400;
+  text-transform:none;letter-spacing:0;line-height:1.5}
+.form .check input{margin-top:.2em}
+.form .cta{border:0;cursor:pointer;width:100%;margin-top:.4rem}
+.opz{text-transform:none;letter-spacing:0;font-weight:400}
+.note{font:400 13.5px/1.6 system-ui,sans-serif;color:var(--soft);margin-top:1.1rem}
+.nomi{font-size:1.05rem;line-height:1.9;border-left:2px solid var(--brass);padding-left:1rem}
 footer{background:var(--bg-2);padding:2.4rem 0 3rem;
   font:400 12.5px/1.7 system-ui,sans-serif;color:var(--soft)}
 footer p{margin-bottom:.5rem}
@@ -132,7 +146,7 @@ footer p{margin-bottom:.5rem}
     <p class="kicker">Mattia Ferro · Cavallino-Treporti, Venice</p>
     <h1><span>I studied the best hotels in the world.</span><span>Then I built one.</span><span>I have run it for eight years.</span></h1>
     <p class="hero-sub">Now I plan other people’s trips as well. Italy, the United States, the Gulf.</p>
-    <a class="cta" href="https://wa.me/393297647959?text=Hello%20Mattia%2C%20I%20would%20like%20to%20talk%20about%20a%20trip.">Write to me on WhatsApp</a>
+    <a class="cta" href="#contatto">Leave your email here</a>
     <p class="hero-note">The Luxury Camp at Union Lido team replies. The proposal carries my signature.</p>
   </div>
 </header>
@@ -153,6 +167,14 @@ footer p{margin-bottom:.5rem}
 
 <section class="sec">
   <div class="wrap">
+    <p class="kicker">What to do now</p>
+    <p>If you are thinking about a trip, even a vague one, even six months away: <strong>leave your email below and I will get back to you</strong> for a twenty minute conversation. There is nothing to decide and nothing to pay.</p>
+    <p class="cta-row"><a class="cta" href="#contatto">Leave your email here</a></p>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
     <p class="kicker">The method</p>
     <h2>How I read a hotel</h2>
     <p>A hotel is not judged by its photographs. It is judged by the people who work there. The four things I check for you are the four I check here every morning, from behind the desk.</p>
@@ -163,15 +185,7 @@ footer p{margin-bottom:.5rem}
       <li><strong>What happens when something goes wrong.</strong> The level of a place is not visible on arrival. It is visible there.</li>
     </ol>
     <p>It is the part photographs never tell you, and the part that stays with you.</p>
-    <p class="cta-row"><a class="cta" href="https://wa.me/393297647959?text=Hello%20Mattia%2C%20I%20would%20like%20to%20talk%20about%20a%20trip.">Write to me on WhatsApp</a></p>
-  </div>
-</section>
-
-<section class="sec">
-  <div class="wrap">
-    <p class="kicker">The photographs on this page</p>
-    <h2>I am not showing you where I send you. I am showing you how I look.</h2>
-    <p>They were taken in the places where I work. There is no facade of a hotel that is not mine, no destination bought from a stock library, no guest’s face. The opening one was taken on a water taxi in the lagoon, on the way to Venice. The others are my own property. We choose the hotel together, afterwards, and you will know why.</p>
+    <p class="cta-row"><a class="cta" href="#contatto">Leave your email here</a></p>
   </div>
 </section>
 
@@ -182,8 +196,8 @@ footer p{margin-bottom:.5rem}
     <p>Before designing it I spent years inside other people’s properties. Dubai, Las Vegas, Shanghai. Research into how the best hotels in the world are actually run, not into how they are photographed.</p>
     <p class="src">I said it to Italiabsolutely on 1 September 2022, before it became a sales argument: «For Luxury Camp we did years of market research into the world's best 5-star superior to 7-star hotels from Dubai to Las Vegas to Shanghai, to which we added our personal Italian warmth and style».</p>
     <figure>
-      <picture><source srcset="/assets/encore.webp" type="image/webp"><img src="/assets/encore.jpg" width="1024" height="682" loading="lazy" alt="A bedroom of the Encore Suite at Luxury Camp at Union Lido."></picture>
-      <figcaption>The Encore Suite. I designed it after years spent studying how Las Vegas suites are made.</figcaption>
+      <picture><source srcset="/assets/venezia.webp" type="image/webp"><img src="/assets/venezia.jpg" width="1400" height="933" loading="lazy" alt="The Grand Canal in Venice at sunset, with the Salute Basilica"></picture>
+      <figcaption>Venice. Half an hour by boat from where I work.</figcaption>
     </figure>
     <p>My uncle, Roberto Senigaglia, was Concierge Clefs d’Or at the Belmond Hotel Cipriani in Venice for thirty years. What stayed with me is not the famous guests. It is that he treated a stranger asking for directions exactly as he treated a guest of the Cipriani.</p>
     <p class="colophon">Property opened in 2018 · 20 open air suites · around 600 families a year · season from April to September</p>
@@ -232,22 +246,45 @@ footer p{margin-bottom:.5rem}
 
 <section class="sec">
   <div class="wrap">
-    <p class="kicker">Let us talk</p>
-    <h2>It starts with a twenty minute conversation</h2>
-    <p>There is nothing to decide now and no obligation to book. Tell me where you are thinking of going, and when.</p>
     <figure>
-      <picture><source srcset="/assets/veranda-sera.webp" type="image/webp"><img src="/assets/veranda-sera.jpg" width="1600" height="900" loading="lazy" alt="The veranda of a suite at Luxury Camp at Union Lido in the evening, lights on."></picture>
-      <figcaption>The veranda of a suite in the evening. If you came from the letter, you are probably sitting there.</figcaption>
+      <picture><source srcset="/assets/dubai.webp" type="image/webp"><img src="/assets/dubai.jpg" width="1400" height="933" loading="lazy" alt="The Dubai skyline at dawn with the Burj Khalifa"></picture>
+      <figcaption>Dubai. One of the places where I studied how the best are run.</figcaption>
     </figure>
-    <p class="cta-row"><a class="cta" href="https://wa.me/393297647959?text=Hello%20Mattia%2C%20I%20would%20like%20to%20talk%20about%20a%20trip.">Write to me on WhatsApp</a></p>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <p class="kicker">Who has been here</p>
+    <p>Some of the names who have slept in our suites, already covered by the press:</p>
+    <p class="nomi">Manuela Arcuri, actress · Valeria Fabrizi, actress · Giorgia Giacobetti · Marco Cesati Cassin · Luca Toni · Tania Cagnotto · Kristian Ghedina · two members of Jamiroquai</p>
+    <p>And who works with me: <strong>Scott Eddy</strong>, travel strategist, author of the property's brand strategy.</p>
+  </div>
+</section>
+
+<section class="sec" id="contatto">
+  <div class="wrap">
+    <p class="kicker">Let us talk</p>
+    <h2>Leave your email here. I will get back to you.</h2>
+    <p>Twenty minutes of conversation, no obligation and nothing to decide. You tell me where you are thinking of going, I tell you what I think from inside the trade.</p>
+    <form class="form" action="https://formsubmit.co/mattia.ferro@fora.travel" method="POST">
+      <input type="hidden" name="_subject" value="Enquiry from travel.mattiaferro.com">
+      <input type="hidden" name="_next" value="https://travel.mattiaferro.com/en/thanks/">
+      <input type="text" name="_honey" style="display:none">
+      <label>Name<input type="text" name="nome" required autocomplete="name"></label>
+      <label>Email<input type="email" name="email" required autocomplete="email"></label>
+      <label>Where are you thinking of going? <span class="opz">(optional)</span><input type="text" name="destinazione"></label>
+      <label class="check"><input type="checkbox" required> I agree to be contacted by Mattia Ferro about my enquiry.</label>
+      <button class="cta" type="submit">I will get back to you</button>
+    </form>
+    <p class="note">Or write directly to <a href="mailto:mattia.ferro@fora.travel">mattia.ferro@fora.travel</a>. The team answers, and I sign the proposal.</p>
   </div>
 </section>
 
 <footer>
   <div class="wrap">
-    <p>Travel planning is a personal service of Mattia Ferro. It is not a service of the property. Bookings are made by Fora Travel Inc., New York.</p>
-    <p>Photographs: Mattia Ferro, Luxury Camp at Union Lido.</p>
-    <p>Luxury Camp at Union Lido, Via Fausta 258, 30013 Cavallino-Treporti (VE), Italy.</p>
+    <p>Travel planning is a personal service of Mattia Ferro. Bookings are contracted and executed by <strong>Fora Travel Inc.</strong>, 228 Park Ave S, New York, NY 10003, a member agency of the Virtuoso network since 2018.</p>
+    <p>Contact: mattia.ferro@fora.travel · Photographs: Mattia Ferro; Venice and Dubai via Unsplash.</p>
   </div>
 </footer>
 
