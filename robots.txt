@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /grazie/
+Disallow: /en/thanks/
+Disallow: /de/danke/
+
+Sitemap: https://travel.mattiaferro.com/sitemap.xml
