@@ -15,17 +15,21 @@
 <meta property="og:description" content="Ho studiato gli alberghi migliori del mondo. Poi ne ho costruito uno. Lo gestisco da otto anni.">
 <meta property="og:url" content="https://travel.mattiaferro.com/">
 <meta property="og:image" content="https://travel.mattiaferro.com/assets/og.jpg">
+<meta name="theme-color" content="#121110">
 <link rel="icon" type="image/png" href="/assets/favicon.png">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <style>
 :root{
-  --ink:#14130f; --ink-2:#3f3d36; --soft:#57544c; --line:#ded9cd;
-  --bg:#faf7f1; --bg-2:#f2ede3; --dark:#14130f; --ivory:#f5f0e6; --brass:#9a7b3f; --brass-text:#7d6233; --brass-dark:#c9a45f;
+  color-scheme:dark;
+  --ink:#efece4; --ink-2:#cfcbc1; --soft:#98948a; --line:#2f2d28;
+  --bg:#121110; --bg-2:#1a1917; --dark:#0b0a09; --ivory:#f5f0e6; --brass:#c9a45f; --brass-text:#c9a45f; --brass-dark:#c9a45f;
   --w:38rem; --wl:58rem; --nav-h:3.25rem;
 }
-@media (prefers-color-scheme:dark){
-  :root{--ink:#efece4; --ink-2:#cfcbc1; --soft:#98948a; --line:#2f2d28;
-        --bg:#121110; --bg-2:#1a1917; --dark:#0b0a09; --brass:#c9a45f; --brass-text:#c9a45f; --brass-dark:#c9a45f;}
+@media print{
+  :root{color-scheme:light;
+    --ink:#14130f; --ink-2:#3f3d36; --soft:#57544c; --line:#ccc;
+    --bg:#fff; --bg-2:#fff; --dark:#fff; --ivory:#14130f; --brass:#7d6233; --brass-text:#7d6233; --brass-dark:#7d6233;}
+  .cta{background:#14130f;color:#fff}
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{-webkit-text-size-adjust:100%}
