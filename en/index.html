@@ -151,11 +151,13 @@ figcaption{font:400 13px/1.5 system-ui,sans-serif;color:var(--soft);margin-top:.
 /* comparsa allo scorrimento */
 @media (prefers-reduced-motion:no-preference){
   html{scroll-behavior:smooth}
-  html.js [data-reveal]{opacity:0;transform:translateY(12px);
-    transition:opacity .5s ease-out,transform .5s ease-out}
-  html.js [data-reveal].vista{opacity:1;transform:none}
+  html.js [data-reveal]>*{opacity:0;transform:translateY(10px);
+    transition:opacity .45s ease-out,transform .45s ease-out;
+    transition-delay:calc(var(--rn,0)*70ms)}
+  html.js [data-reveal].vista>*{opacity:1;transform:none}
 }
-@media print{[data-reveal]{opacity:1!important;transform:none!important}}
+@media print{[data-reveal]>*{opacity:1!important;transform:none!important}}
+@media (max-width:45.99rem){.cta-row .cta{display:block;text-align:center}}
 .rev{margin:1.6rem 0;border-left:2px solid var(--brass);padding-left:1.1rem}
 .rev p{font-size:1.05rem;line-height:1.65;margin-bottom:.5rem}
 .rev footer{font:400 13px/1.5 system-ui,sans-serif;color:var(--soft)}
@@ -359,8 +361,8 @@ body>footer p{margin-bottom:.5rem}
 
 <section class="sec">
   <div class="wrap">
-    <figure class="ritratto">
-      <picture><source srcset="/assets/dubai.webp" type="image/webp"><img src="/assets/dubai.jpg" width="1400" height="1460" loading="lazy" alt="Mattia Ferro on the beach in front of the Burj Al Arab in Dubai, at sunset."></picture>
+    <figure>
+      <picture><source srcset="/assets/dubai-burj.webp" type="image/webp"><img src="/assets/dubai-burj.jpg" width="1400" height="1120" loading="lazy" alt="Mattia Ferro on the beach in front of the Burj Al Arab in Dubai, at sunset."></picture>
       <figcaption>Dubai, the Burj Al Arab. One of the places where I studied how the best are run.</figcaption>
     </figure>
   </div>
@@ -433,8 +435,12 @@ body>footer p{margin-bottom:.5rem}
     entries.forEach(function(en){
       if(en.isIntersecting){en.target.classList.add('vista');io.unobserve(en.target)}
     });
-  },{threshold:0,rootMargin:'0px 0px -10% 0px'});
-  els.forEach(function(el){el.setAttribute('data-reveal','');io.observe(el)});
+  },{threshold:0,rootMargin:'0px 0px -6% 0px'});
+  els.forEach(function(el){
+    el.setAttribute('data-reveal','');
+    Array.prototype.forEach.call(el.children,function(c,i){c.style.setProperty('--rn',Math.min(i,4))});
+    io.observe(el);
+  });
 })();
 </script>
 
