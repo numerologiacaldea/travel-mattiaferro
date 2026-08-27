@@ -119,6 +119,16 @@ figcaption{font:400 13px/1.5 system-ui,sans-serif;color:var(--soft);margin-top:.
 .form .cta{border:0;cursor:pointer;width:100%;margin-top:.4rem}
 .opz{text-transform:none;letter-spacing:0;font-weight:400}
 .note{font:400 13.5px/1.6 system-ui,sans-serif;color:var(--soft);margin-top:1.1rem}
+
+/* portale di prenotazione */
+.band h2{color:var(--ivory)}
+.band .form label{color:rgba(245,240,230,.7)}
+.band .form input[type=text]{background:rgba(245,240,230,.08);border-color:rgba(245,240,230,.28);color:var(--ivory)}
+.band .form input[type=text]::placeholder{color:rgba(245,240,230,.4)}
+.band .form input:focus{outline-color:var(--brass-dark)}
+.band .note{color:rgba(245,240,230,.6)}
+.searchrow{display:flex;flex-direction:column}
+.searchrow label{margin-bottom:0}
 .rev{margin:1.6rem 0;border-left:2px solid var(--brass);padding-left:1.1rem}
 .rev p{font-size:1.05rem;line-height:1.65;margin-bottom:.5rem}
 .rev footer{font:400 13px/1.5 system-ui,sans-serif;color:var(--soft)}
@@ -137,6 +147,9 @@ footer p{margin-bottom:.5rem}
     linear-gradient(to top, rgba(10,9,8,.5) 0%, rgba(10,9,8,0) 38%)}
   .hero-in{margin:0;max-width:none;width:56%;padding:0 2rem 4.6rem clamp(2rem,7vw,6.5rem)}
   .hero-in h1{max-width:30rem}
+  .searchrow{flex-direction:row;gap:.8rem;align-items:flex-end}
+  .searchrow label{flex:1}
+  .form .searchrow .cta{width:auto;margin-top:0;white-space:nowrap}
 }
 </style>
 </head>
@@ -237,6 +250,22 @@ footer p{margin-bottom:.5rem}
       <p>Luxury Camp at Union Lido, Cavallino-Treporti, aperto nel 2018. Il team resta a disposizione anche quando dormi altrove.</p>
     </div>
     <p>Paghi la tariffa dell'albergo. Non si aggiunge niente perché la prenotazione passa da me. Dove i programmi valgono, dentro quella stessa tariffa rientrano spesso la colazione, un credito da spendere in struttura, l'upgrade quando c'è disponibilità, l'uscita posticipata. Quali valgano, e in quale albergo, te lo scrivo prima di prenotare. Non ti prometto una colazione che poi non c'è.</p>
+  </div>
+</section>
+
+<section class="band" id="prenota">
+  <div class="wrap">
+    <p class="kicker">Il portale di prenotazione</p>
+    <hr class="rule-brass">
+    <h2>Puoi anche fare da solo.</h2>
+    <p>Fora mi dà un portale di prenotazione con il mio nome sopra. Scrivi la destinazione qui sotto: si apre il portale, vedi gli alberghi con tariffe e date, e da lì puoi prenotare. La prenotazione passa comunque da me, e durante il viaggio il numero che chiami resta il nostro.</p>
+    <form class="form" action="https://trips.foratravel.com/mattia-ferro/book" method="get" target="_blank" rel="noopener">
+      <div class="searchrow">
+        <label>Dove stai pensando di andare?<input type="text" name="search" placeholder="Roma, New York, Dubai" autocomplete="off"></label>
+        <button class="cta" type="submit">Cerca sul portale</button>
+      </div>
+    </form>
+    <p class="note">Prima di mostrarti tariffe e disponibilità il portale chiede la tua email: è così che Fora collega la ricerca a me. Il portale è in inglese.</p>
   </div>
 </section>
 

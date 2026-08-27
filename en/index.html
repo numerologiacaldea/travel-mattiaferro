@@ -119,6 +119,16 @@ figcaption{font:400 13px/1.5 system-ui,sans-serif;color:var(--soft);margin-top:.
 .form .cta{border:0;cursor:pointer;width:100%;margin-top:.4rem}
 .opz{text-transform:none;letter-spacing:0;font-weight:400}
 .note{font:400 13.5px/1.6 system-ui,sans-serif;color:var(--soft);margin-top:1.1rem}
+
+/* portale di prenotazione */
+.band h2{color:var(--ivory)}
+.band .form label{color:rgba(245,240,230,.7)}
+.band .form input[type=text]{background:rgba(245,240,230,.08);border-color:rgba(245,240,230,.28);color:var(--ivory)}
+.band .form input[type=text]::placeholder{color:rgba(245,240,230,.4)}
+.band .form input:focus{outline-color:var(--brass-dark)}
+.band .note{color:rgba(245,240,230,.6)}
+.searchrow{display:flex;flex-direction:column}
+.searchrow label{margin-bottom:0}
 .rev{margin:1.6rem 0;border-left:2px solid var(--brass);padding-left:1.1rem}
 .rev p{font-size:1.05rem;line-height:1.65;margin-bottom:.5rem}
 .rev footer{font:400 13px/1.5 system-ui,sans-serif;color:var(--soft)}
@@ -137,6 +147,9 @@ footer p{margin-bottom:.5rem}
     linear-gradient(to top, rgba(10,9,8,.5) 0%, rgba(10,9,8,0) 38%)}
   .hero-in{margin:0;max-width:none;width:56%;padding:0 2rem 4.6rem clamp(2rem,7vw,6.5rem)}
   .hero-in h1{max-width:30rem}
+  .searchrow{flex-direction:row;gap:.8rem;align-items:flex-end}
+  .searchrow label{flex:1}
+  .form .searchrow .cta{width:auto;margin-top:0;white-space:nowrap}
 }
 </style>
 </head>
@@ -237,6 +250,22 @@ footer p{margin-bottom:.5rem}
       <p>Luxury Camp at Union Lido, Cavallino-Treporti, opened in 2018. The team stays available even when you sleep somewhere else.</p>
     </div>
     <p>You pay the hotel’s own rate. Nothing is added because the booking goes through me. Where the programmes apply, that same rate often already includes breakfast, a credit to spend on the property, an upgrade when one is available, a late check out. Which ones apply, and at which hotel, I write to you before booking. I am not going to promise you a breakfast that then is not there.</p>
+  </div>
+</section>
+
+<section class="band" id="prenota">
+  <div class="wrap">
+    <p class="kicker">The booking portal</p>
+    <hr class="rule-brass">
+    <h2>You can also do it yourself.</h2>
+    <p>Fora gives me a booking portal with my name on it. Type a destination below: the portal opens, you see the hotels with rates and dates, and you can book right there. The booking still goes through me, and while you are travelling the number you call is still ours.</p>
+    <form class="form" action="https://trips.foratravel.com/mattia-ferro/book" method="get" target="_blank" rel="noopener">
+      <div class="searchrow">
+        <label>Where are you thinking of going?<input type="text" name="search" placeholder="Rome, New York, Dubai" autocomplete="off"></label>
+        <button class="cta" type="submit">Search the portal</button>
+      </div>
+    </form>
+    <p class="note">Before showing rates and availability, the portal asks for your email: that is how Fora links the search to me.</p>
   </div>
 </section>
 
