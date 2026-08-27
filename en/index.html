@@ -14,7 +14,12 @@
 <meta property="og:title" content="Mattia Ferro, travel advisor">
 <meta property="og:description" content="I studied the best hotels in the world. Then I built one. I have run it for eight years.">
 <meta property="og:url" content="https://travel.mattiaferro.com/en/">
+<meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://travel.mattiaferro.com/assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Mattia Ferro on a water taxi in the lagoon, heading to Venice.">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#121110">
 <link rel="icon" type="image/png" href="/assets/favicon.png">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
@@ -86,14 +91,6 @@ strong{font-weight:600}
 /* immagini */
 figure{margin:1.8rem 0}
 figcaption{font:400 13px/1.5 system-ui,sans-serif;color:var(--soft);margin-top:.6rem}
-.ph{background:var(--bg-2);border:1px dashed var(--line);border-radius:2px;
-  display:flex;align-items:center;justify-content:center;text-align:center;
-  padding:1.6rem 1.2rem;min-height:0}
-.ph span{font:400 12.5px/1.55 system-ui,sans-serif;color:var(--soft);max-width:24rem}
-.ph.r45{aspect-ratio:3/2}
-.ph.r11{aspect-ratio:1/1;width:70%}
-.band .ph{background:rgba(245,240,230,.06);border-color:rgba(245,240,230,.22)}
-.band .ph span{color:rgba(245,240,230,.6)}
 
 /* elenchi e blocchi */
 .steps{list-style:none;counter-reset:s}
@@ -125,14 +122,15 @@ figcaption{font:400 13px/1.5 system-ui,sans-serif;color:var(--soft);margin-top:.
 .note{font:400 13.5px/1.6 system-ui,sans-serif;color:var(--soft);margin-top:1.1rem}
 
 /* portale di prenotazione */
-.band h2{color:var(--ivory)}
-.band .form label{color:rgba(245,240,230,.7)}
-.band .form input[type=text]{background:rgba(245,240,230,.08);border-color:rgba(245,240,230,.28);color:var(--ivory)}
-.band .form input[type=text]::placeholder{color:rgba(245,240,230,.4)}
-.band .form input:focus{outline-color:var(--brass-dark)}
-.band .note{color:rgba(245,240,230,.6)}
 .searchrow{display:flex;flex-direction:column}
 .searchrow label{margin-bottom:0}
+
+/* stati interattivi */
+.cta{transition:background .15s ease,color .15s ease}
+a:hover{color:var(--brass)}
+.cta:hover{background:#fff;color:#14130f}
+a:focus-visible,button:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+.form .check input{width:1.15em;height:1.15em}
 
 /* barra fissa */
 .topbar{position:sticky;top:0;z-index:50;background:var(--bg);border-bottom:1px solid var(--line)}
@@ -145,7 +143,7 @@ figcaption{font:400 13px/1.5 system-ui,sans-serif;color:var(--soft);margin-top:.
   padding:0 max(1.35rem,env(safe-area-inset-right)) 0 max(1.35rem,env(safe-area-inset-left))}
 .topbar-nome{font:500 12.5px/1 system-ui,sans-serif;letter-spacing:.14em;
   text-transform:uppercase;color:var(--ink);text-decoration:none;white-space:nowrap;padding:1rem 0}
-.topbar .cta{background:var(--ink);color:var(--bg);padding:.55rem 1rem;font-size:13.5px;white-space:nowrap}
+.topbar .cta{background:var(--ink);color:var(--bg);padding:.7rem 1.15rem;font-size:13.5px;white-space:nowrap}
 [id]{scroll-margin-top:calc(var(--nav-h) + .75rem)}
 
 /* comparsa allo scorrimento */
@@ -162,7 +160,6 @@ figcaption{font:400 13px/1.5 system-ui,sans-serif;color:var(--soft);margin-top:.
 .rev p{font-size:1.05rem;line-height:1.65;margin-bottom:.5rem}
 .rev footer{font:400 13px/1.5 system-ui,sans-serif;color:var(--soft)}
 .nomi-riga{font:400 14px/1.7 system-ui,sans-serif;color:var(--soft);margin-top:1.8rem}
-.nomi{font-size:1.05rem;line-height:1.9;border-left:2px solid var(--brass);padding-left:1rem}
 body>footer{background:var(--bg-2);padding:2.4rem 0 3rem;
   font:400 12.5px/1.7 system-ui,sans-serif;color:var(--soft)}
 body>footer p{margin-bottom:.5rem}
@@ -220,9 +217,12 @@ body>footer p{margin-bottom:.5rem}
   #contatto .form>label:nth-of-type(1){grid-column:1}
   #contatto .form>label:nth-of-type(2){grid-column:2}
   .topbar-in{max-width:76rem;padding:0 2.5rem}
-  .topbar .cta{font-size:14px;padding:.65rem 1.15rem}
+  .topbar .cta{font-size:14px}
 }
 </style>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "Person", "name": "Mattia Ferro", "jobTitle": "Travel advisor", "url": "https://travel.mattiaferro.com/en/", "image": "https://travel.mattiaferro.com/assets/og.jpg", "email": "mailto:mattia.ferro@fora.travel", "affiliation": {"@type": "Organization", "name": "Fora Travel Inc.", "url": "https://www.foratravel.com/"}, "knowsLanguage": ["it", "en"], "sameAs": ["https://www.foratravel.com/advisor/mattia-ferro", "https://www.virtuoso.com/advisor/mattferr74504", "https://www.linkedin.com/in/mattiaferro", "https://mattiaferro.com/", "https://index.mattiaferro.com/"]}
+</script>
 </head>
 <body>
 
@@ -257,7 +257,7 @@ body>footer p{margin-bottom:.5rem}
       <figcaption>That page exists only on paper. Here it is.</figcaption>
     </figure>
     <p>This one you can open right now. Forbes Italia wrote about the property on 14 July 2025 and called it «the first Italian five-star property of this kind». <a href="https://forbes.it/2025/07/14/luxury-camp-lesperienza-esclusiva-delle-vacanze-allaria-aperta">Read the article.</a></p>
-    <p>And on 31 July 2026 <a href="https://tg24.sky.it/lifestyle/2026/07/31/turismo-lusso-torna-consulente-viaggio">Sky TG24</a> covered the return of the travel consultant in luxury tourism, with the Virtuoso network and my work in it: «Finché non ho dovuto costruire un albergo, di un hotel vedevo soltanto metà delle cose». Until I had to build a hotel, I only saw half of what a hotel is.</p>
+    <p>And on 31 July 2026 <a href="https://tg24.sky.it/lifestyle/2026/07/31/turismo-lusso-torna-consulente-viaggio">Sky TG24</a> covered the return of the travel consultant in luxury tourism, with the <a href="https://www.virtuoso.com/advisor/mattferr74504">Virtuoso network</a>, of which Fora is a member, and my work in it: «Finché non ho dovuto costruire un albergo, di un hotel vedevo soltanto metà delle cose». Until I had to build a hotel, I only saw half of what a hotel is.</p>
   </div>
 </section>
 
@@ -281,8 +281,7 @@ body>footer p{margin-bottom:.5rem}
       <li><strong>What happens when something goes wrong.</strong> The level of a place is not visible on arrival. It is visible there.</li>
     </ol>
     <p>It is the part photographs never tell you, and the part that stays with you.</p>
-    <p>This way of looking has a name and a score. I turned it into a tool: 23 questions about observable facts, no reviews, a score from 0 to 100. Three minutes, and you can measure the last hotel you slept in yourself.</p>
-    <p class="cta-row"><a class="cta" href="https://index.mattiaferro.com/en/">Try the Ferro Index</a></p>
+    <p>This way of looking has a name and a score. I turned it into a tool: 23 questions about observable facts, no reviews, a score from 0 to 100. Three minutes, and you can measure the last hotel you slept in yourself. <a href="https://index.mattiaferro.com/en/">Try the Ferro Index</a>.</p>
   </div>
 </section>
 
@@ -305,8 +304,8 @@ body>footer p{margin-bottom:.5rem}
   <div class="wrap">
     <p class="kicker">What happens when you write</p>
     <ol class="steps">
-      <li><strong>The Luxury Camp at Union Lido team answers</strong>, usually the same day. Every file passes through me.</li>
-      <li><strong>Twenty minutes of conversation</strong>, whenever suits you. Nothing is decided there.</li>
+      <li><strong>The Luxury Camp at Union Lido team answers</strong>, usually the same day. Every enquiry crosses my desk.</li>
+      <li><strong>Twenty minutes of conversation</strong>, whenever it suits you. Nothing is decided there.</li>
       <li><strong>A proposal with two alternatives</strong> and the reason for each. If neither convinces you, we start again.</li>
       <li><strong>Fora Travel makes the bookings</strong>, the agency I work with. While you are travelling, the number you call is still ours.</li>
     </ol>
@@ -319,7 +318,7 @@ body>footer p{margin-bottom:.5rem}
     <div class="griglia">
     <div class="blk">
       <p class="lbl">Agency</p>
-      <p>I plan and book through Fora Travel, a New York agency, where I am a <a href="https://www.foratravel.com/advisor/mattia-ferro">Pro level advisor</a>. The certification, issued by Fora on 9 July 2026, <a href="https://www.foratravel.com/certification?credential=29319607-bedc-4e87-bd8e-bbac78a36589">can be verified here</a>.</p>
+      <p>I plan and book through Fora Travel, a New York agency, where I am a <a href="https://www.foratravel.com/advisor/mattia-ferro">Pro level advisor</a>: the Pro badge is published by Fora on my profile. I have also completed Fora's certification of 9 July 2026, <a href="https://www.foratravel.com/certification?credential=29319607-bedc-4e87-bd8e-bbac78a36589">verifiable here</a>.</p>
     </div>
     <div class="blk">
       <p class="lbl">Network</p>
@@ -334,7 +333,16 @@ body>footer p{margin-bottom:.5rem}
   </div>
 </section>
 
-<section class="band" id="prenota">
+<section class="sec">
+  <div class="wrap">
+    <p class="kicker">How I get paid</p>
+    <p>The properties pay me, with a commission on your stay. Not you. It means that what I earn depends on where I send you, and you should know that before you write to me, not after.</p>
+    <p class="pull">That is why the only proof you can ask me for is that I tell you no. An advisor who never rules anything out is not working for you.</p>
+    <p>If you have slept at Luxury Camp at Union Lido, the planning is included. For complex itineraries there may be a planning fee, and I tell you before we start, not at the end.</p>
+  </div>
+</section>
+
+<section class="sec" id="prenota">
   <div class="wrap">
     <p class="kicker">The booking portal</p>
     <hr class="rule-brass">
@@ -347,15 +355,6 @@ body>footer p{margin-bottom:.5rem}
       </div>
     </form>
     <p class="note">Before showing rates and availability, the portal asks for your email: that is how Fora links the search to me.</p>
-  </div>
-</section>
-
-<section class="sec">
-  <div class="wrap">
-    <p class="kicker">How I get paid</p>
-    <p>The properties pay me, with a commission on your stay. Not you. It means that what I earn depends on where I send you, and you should know that before you write to me, not after.</p>
-    <p class="pull">That is why the only proof you can ask me for is that I tell you no. An advisor who never rules anything out is not working for you.</p>
-    <p>If you have slept at Luxury Camp at Union Lido, the planning is included. For complex itineraries there may be a planning fee, and I tell you before we start, not at the end.</p>
   </div>
 </section>
 
@@ -402,7 +401,7 @@ body>footer p{margin-bottom:.5rem}
 
 <section class="sec" id="contatto">
   <div class="wrap">
-    <p class="kicker">Let us talk</p>
+    <p class="kicker">Let's talk</p>
     <h2>Leave your email here. I will get back to you.</h2>
     <p>Twenty minutes of conversation, no obligation and nothing to decide. You tell me where you are thinking of going, I tell you what I think from inside the trade.</p>
     <form class="form" action="https://formsubmit.co/mattia.ferro@fora.travel" method="POST">
@@ -413,8 +412,9 @@ body>footer p{margin-bottom:.5rem}
       <label>Email<input type="email" name="email" required autocomplete="email"></label>
       <label>Where are you thinking of going? <span class="opz">(optional)</span><input type="text" name="destinazione"></label>
       <label class="check"><input type="checkbox" name="consenso" value="yes" required> I agree to be contacted by Mattia Ferro about my enquiry.</label>
-      <button class="cta" type="submit">I will get back to you</button>
+      <button class="cta" type="submit">Send. I'll get back to you.</button>
     </form>
+    <p class="note">Your email is used only to get back to you: no newsletter, no list. <a href="/en/privacy/">Privacy notice</a>.</p>
     <p class="note">Or write directly to <a href="mailto:mattia.ferro@fora.travel">mattia.ferro@fora.travel</a>. The team answers, and I sign the proposal.</p>
   </div>
 </section>
@@ -430,7 +430,7 @@ body>footer p{margin-bottom:.5rem}
 (function(){
   if(!('IntersectionObserver' in window))return;
   document.documentElement.classList.add('js');
-  var els=document.querySelectorAll('section.sec:not(#contatto)>.wrap');
+  var els=document.querySelectorAll('section.sec:not(#contatto):not(#prenota)>.wrap');
   var io=new IntersectionObserver(function(entries){
     entries.forEach(function(en){
       if(en.isIntersecting){en.target.classList.add('vista');io.unobserve(en.target)}
