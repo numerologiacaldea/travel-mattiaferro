@@ -21,7 +21,7 @@
 :root{
   --ink:#14130f; --ink-2:#3f3d36; --soft:#57544c; --line:#ded9cd;
   --bg:#faf7f1; --bg-2:#f2ede3; --dark:#14130f; --ivory:#f5f0e6; --brass:#9a7b3f; --brass-text:#7d6233; --brass-dark:#c9a45f;
-  --w:38rem;
+  --w:38rem; --wl:58rem; --nav-h:3.25rem;
 }
 @media (prefers-color-scheme:dark){
   :root{--ink:#efece4; --ink-2:#cfcbc1; --soft:#98948a; --line:#2f2d28;
@@ -129,6 +129,29 @@ figcaption{font:400 13px/1.5 system-ui,sans-serif;color:var(--soft);margin-top:.
 .band .note{color:rgba(245,240,230,.6)}
 .searchrow{display:flex;flex-direction:column}
 .searchrow label{margin-bottom:0}
+
+/* barra fissa */
+.topbar{position:sticky;top:0;z-index:50;background:var(--bg);border-bottom:1px solid var(--line)}
+@supports ((-webkit-backdrop-filter:blur(10px)) or (backdrop-filter:blur(10px))){
+  .topbar{background:color-mix(in srgb,var(--bg) 92%,transparent);
+    -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+}
+.topbar-in{max-width:var(--wl);margin:0 auto;height:var(--nav-h);display:flex;
+  align-items:center;justify-content:space-between;gap:1rem;
+  padding:0 max(1.35rem,env(safe-area-inset-right)) 0 max(1.35rem,env(safe-area-inset-left))}
+.topbar-nome{font:500 12.5px/1 system-ui,sans-serif;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--ink);text-decoration:none;white-space:nowrap;padding:1rem 0}
+.topbar .cta{background:var(--ink);color:var(--bg);padding:.55rem 1rem;font-size:13.5px;white-space:nowrap}
+[id]{scroll-margin-top:calc(var(--nav-h) + .75rem)}
+
+/* comparsa allo scorrimento */
+@media (prefers-reduced-motion:no-preference){
+  html{scroll-behavior:smooth}
+  html.js [data-reveal]{opacity:0;transform:translateY(12px);
+    transition:opacity .5s ease-out,transform .5s ease-out}
+  html.js [data-reveal].vista{opacity:1;transform:none}
+}
+@media print{[data-reveal]{opacity:1!important;transform:none!important}}
 .rev{margin:1.6rem 0;border-left:2px solid var(--brass);padding-left:1.1rem}
 .rev p{font-size:1.05rem;line-height:1.65;margin-bottom:.5rem}
 .rev footer{font:400 13px/1.5 system-ui,sans-serif;color:var(--soft)}
@@ -151,6 +174,34 @@ footer p{margin-bottom:.5rem}
   .searchrow label{flex:1}
   .form .searchrow .cta{width:auto;margin-top:0;white-space:nowrap}
 }
+
+@media (min-width:64rem){
+  :root{--nav-h:3.5rem}
+  body{font-size:19px;line-height:1.66}
+  .sec,.band{padding:5.5rem 0}
+  .kicker{font-size:12.5px}
+  h1{font-size:clamp(2.4rem,3vw,3.1rem)}
+  h2{font-size:clamp(1.7rem,2.2vw,2.1rem)}
+  .quote{font-size:clamp(1.6rem,2vw,2rem)}
+  .pull{font-size:1.2rem}
+  .hero-in h1{max-width:34rem}
+  .wrap{max-width:none;display:grid;grid-template-columns:1fr min(40rem,100%) 1fr;padding:0 2rem}
+  .wrap>*{grid-column:2}
+  .wrap>figure,.wrap>.steps,.wrap>.griglia,.wrap>.rev3{
+    grid-column:1/-1;width:min(var(--wl),100%);justify-self:center}
+  .wrap>figure.ritratto{grid-column:2;width:100%;max-width:30rem}
+  .wrap>.steps{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem 3.5rem}
+  .steps li{margin-bottom:0}
+  .wrap>.griglia{display:grid;grid-template-columns:repeat(3,1fr);gap:2.5rem}
+  .griglia .blk{margin-bottom:0}
+  .wrap>.rev3{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin:1.6rem 0}
+  .rev3 .rev{margin:0}
+  .rev3 .rev p{font-size:1rem}
+  #contatto .form{display:grid;grid-template-columns:1fr 1fr;column-gap:1.4rem}
+  #contatto .form>*{grid-column:1/-1}
+  #contatto .form>label:nth-of-type(1){grid-column:1}
+  #contatto .form>label:nth-of-type(2){grid-column:2}
+}
 </style>
 </head>
 <body>
@@ -158,7 +209,7 @@ footer p{margin-bottom:.5rem}
 <header class="hero">
   <picture><source srcset="/assets/hero.webp" type="image/webp"><img class="hero-img" src="/assets/hero.jpg" width="1170" height="1560" fetchpriority="high" alt="Mattia Ferro su un taxi d'acqua in laguna, verso Venezia."></picture>
   <div class="hero-shade"></div>
-  <nav class="lang"><a href="/en/" hreflang="en">English</a> <a href="/de/" hreflang="de">Deutsch</a></nav>
+  <nav class="lang" aria-label="Lingua"><a href="/en/" hreflang="en">English</a> <a href="/de/" hreflang="de">Deutsch</a></nav>
   <div class="hero-in">
     <p class="kicker">Mattia Ferro · Cavallino-Treporti, Venezia</p>
     <h1><span>Ho studiato gli alberghi migliori del mondo.</span><span>Poi ne ho costruito uno.</span><span>Lo gestisco da otto anni.</span></h1>
@@ -168,13 +219,20 @@ footer p{margin-bottom:.5rem}
   </div>
 </header>
 
+<nav class="topbar" aria-label="Navigazione">
+  <div class="topbar-in">
+    <a class="topbar-nome" href="#">Mattia Ferro</a>
+    <a class="cta" href="#contatto">Lascia qui la tua email</a>
+  </div>
+</nav>
+
 <section class="band">
   <div class="wrap">
     <p class="kicker">Chi lo dice</p>
     <hr class="rule-brass">
     <p class="quote">«Innovatore del turismo italiano di alta gamma»</p>
     <p class="attrib">Mirko Crocoli, Forbes Life, edizione cartacea, maggio 2026, pagina 161.</p>
-    <figure>
+    <figure class="ritratto">
       <picture><source srcset="/assets/forbes-161.webp" type="image/webp"><img src="/assets/forbes-161.jpg" width="720" height="947" loading="lazy" alt="La pagina 161 di Forbes Life, maggio 2026, con l'intervista a Mattia Ferro firmata Mirko Crocoli."></picture>
       <figcaption>Quella pagina esiste solo su carta. Eccola.</figcaption>
     </figure>
@@ -186,7 +244,7 @@ footer p{margin-bottom:.5rem}
 <section class="sec">
   <div class="wrap">
     <p class="kicker">Cosa fare adesso</p>
-    <p>Se state pensando a un viaggio, anche vago, anche fra sei mesi: <strong>lasciate la vostra email qui sotto e vi ricontatto io</strong> per venti minuti di conversazione. Non c'è niente da decidere e niente da pagare.</p>
+    <p>Se stai pensando a un viaggio, anche vago, anche fra sei mesi: <strong>lascia la tua email qui sotto e ti ricontatto io</strong> per venti minuti di conversazione. Non c'è niente da decidere e niente da pagare.</p>
     <p class="cta-row"><a class="cta" href="#contatto">Lascia qui la tua email</a></p>
   </div>
 </section>
@@ -203,7 +261,8 @@ footer p{margin-bottom:.5rem}
       <li><strong>Cosa succede quando qualcosa va storto.</strong> Il livello di un posto non si vede all'arrivo. Si vede lì.</li>
     </ol>
     <p>È la parte che le fotografie non dicono, ed è la parte che poi ti resta.</p>
-    <p class="cta-row"><a class="cta" href="#contatto">Lascia qui la tua email</a></p>
+    <p>Questo modo di guardare ha un nome e un punteggio. L'ho trasformato in uno strumento: 23 domande su fatti osservabili, nessuna recensione, un punteggio da 0 a 100. Tre minuti, e misuri da solo l'ultimo hotel in cui hai dormito.</p>
+    <p class="cta-row"><a class="cta" href="https://index.mattiaferro.com/">Prova il Ferro Index</a></p>
   </div>
 </section>
 
@@ -237,6 +296,7 @@ footer p{margin-bottom:.5rem}
 <section class="sec">
   <div class="wrap">
     <p class="kicker">Con chi lavoro</p>
+    <div class="griglia">
     <div class="blk">
       <p class="lbl">Agenzia</p>
       <p>Progetto e prenoto attraverso Fora Travel, agenzia di New York, dove sono <a href="https://www.foratravel.com/advisor/mattia-ferro">advisor di livello Pro</a>. La certificazione, rilasciata da Fora il 9 luglio 2026, <a href="https://www.foratravel.com/certification?credential=29319607-bedc-4e87-bd8e-bbac78a36589">si verifica qui</a>.</p>
@@ -248,6 +308,7 @@ footer p{margin-bottom:.5rem}
     <div class="blk">
       <p class="lbl">Struttura</p>
       <p>Luxury Camp at Union Lido, Cavallino-Treporti, aperto nel 2018. Il team resta a disposizione anche quando dormi altrove.</p>
+    </div>
     </div>
     <p>Paghi la tariffa dell'albergo. Non si aggiunge niente perché la prenotazione passa da me. Dove i programmi valgono, dentro quella stessa tariffa rientrano spesso la colazione, un credito da spendere in struttura, l'upgrade quando c'è disponibilità, l'uscita posticipata. Quali valgano, e in quale albergo, te lo scrivo prima di prenotare. Non ti prometto una colazione che poi non c'è.</p>
   </div>
@@ -280,7 +341,7 @@ footer p{margin-bottom:.5rem}
 
 <section class="sec">
   <div class="wrap">
-    <figure>
+    <figure class="ritratto">
       <picture><source srcset="/assets/dubai.webp" type="image/webp"><img src="/assets/dubai.jpg" width="1400" height="1460" loading="lazy" alt="Mattia Ferro sulla spiaggia davanti al Burj Al Arab a Dubai, al tramonto."></picture>
       <figcaption>Dubai, il Burj Al Arab. Uno dei posti dove ho studiato come si gestisce l&rsquo;alta gamma.</figcaption>
     </figure>
@@ -301,6 +362,7 @@ footer p{margin-bottom:.5rem}
     </blockquote>
     <p>E su Google, dove le recensioni le scrivono gli ospiti:</p>
     <p><a href="https://www.google.com/maps/place/Luxury+Camp+at+Union+Lido/">4,5 su 5, su 150 recensioni Google</a>. La media le comprende tutte, anche le critiche: potete leggerle una per una.</p>
+    <div class="rev3">
     <blockquote class="rev">
       <p>«Eleganza, raffinatezza, attenzione ai dettagli, contatto con la natura e silenzio regnano sovrani. [...] Rigenerata. Pronta per i prossimi sogni.»</p>
       <footer>Giorgia Giacobetti · recensione Google, 5/5</footer>
@@ -313,6 +375,7 @@ footer p{margin-bottom:.5rem}
       <p>«I would like to express my gratitude to Nicola and Clemens for their exceptional hosting. [...] The hospitality we experienced was top-notch.»</p>
       <footer>Ivan Ivanov · recensione Google, 5/5</footer>
     </blockquote>
+    </div>
     <p class="nomi-riga">E fra chi ha dormito nelle suite, raccontati dalla stampa: Marco Cesati Cassin, Luca Toni, Tania Cagnotto, Kristian Ghedina, due membri dei Jamiroquai.</p>
   </div>
 </section>
@@ -320,19 +383,19 @@ footer p{margin-bottom:.5rem}
 <section class="sec" id="contatto">
   <div class="wrap">
     <p class="kicker">Parliamone</p>
-    <h2>Lasciate qui la vostra email. Vi ricontatto io.</h2>
-    <p>Venti minuti di conversazione, senza nessun impegno e senza niente da decidere. Mi dite dove state pensando di andare, io vi dico cosa ne penso da dentro il mestiere.</p>
+    <h2>Lascia qui la tua email. Ti ricontatto io.</h2>
+    <p>Venti minuti di conversazione, senza nessun impegno e senza niente da decidere. Mi dici dove stai pensando di andare, io ti dico cosa ne penso da dentro il mestiere.</p>
     <form class="form" action="https://formsubmit.co/mattia.ferro@fora.travel" method="POST">
       <input type="hidden" name="_subject" value="Richiesta dalla pagina travel.mattiaferro.com">
       <input type="hidden" name="_next" value="https://travel.mattiaferro.com/grazie/">
       <input type="text" name="_honey" style="display:none">
       <label>Nome<input type="text" name="nome" required autocomplete="name"></label>
       <label>Email<input type="email" name="email" required autocomplete="email"></label>
-      <label>Dove state pensando di andare? <span class="opz">(facoltativo)</span><input type="text" name="destinazione"></label>
-      <label class="check"><input type="checkbox" required> Acconsento a essere ricontattato da Mattia Ferro riguardo alla mia richiesta.</label>
+      <label>Dove stai pensando di andare? <span class="opz">(facoltativo)</span><input type="text" name="destinazione"></label>
+      <label class="check"><input type="checkbox" name="consenso" value="sì" required> Acconsento a essere ricontattato da Mattia Ferro riguardo alla mia richiesta.</label>
       <button class="cta" type="submit">Ti ricontatto io</button>
     </form>
-    <p class="note">Oppure scrivete direttamente a <a href="mailto:mattia.ferro@fora.travel">mattia.ferro@fora.travel</a>. Risponde il team, la proposta la firmo io.</p>
+    <p class="note">Oppure scrivi direttamente a <a href="mailto:mattia.ferro@fora.travel">mattia.ferro@fora.travel</a>. Risponde il team, la proposta la firmo io.</p>
   </div>
 </section>
 
@@ -342,6 +405,20 @@ footer p{margin-bottom:.5rem}
     <p>Contatto: mattia.ferro@fora.travel · Fotografie: Mattia Ferro; Venezia via Unsplash.</p>
   </div>
 </footer>
+
+<script>
+(function(){
+  if(!('IntersectionObserver' in window))return;
+  document.documentElement.classList.add('js');
+  var els=document.querySelectorAll('section.sec:not(#contatto)>.wrap');
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(en.isIntersecting){en.target.classList.add('vista');io.unobserve(en.target)}
+    });
+  },{threshold:0,rootMargin:'0px 0px -10% 0px'});
+  els.forEach(function(el){el.setAttribute('data-reveal','');io.observe(el)});
+})();
+</script>
 
 </body>
 </html>
