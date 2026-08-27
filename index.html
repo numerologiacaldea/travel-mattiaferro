@@ -176,33 +176,45 @@ body>footer p{margin-bottom:.5rem}
 }
 
 @media (min-width:64rem){
-  :root{--nav-h:3.5rem}
-  body{font-size:19px;line-height:1.66}
+  :root{--nav-h:3.75rem}
+  body{font-size:20px;line-height:1.62}
   .sec,.band{padding:6rem 0}
-  .kicker{font-size:12.5px}
-  h1{font-size:clamp(2.4rem,3vw,3.1rem)}
-  h2{font-size:clamp(1.8rem,2.4vw,2.3rem);margin-bottom:1.2rem}
-  .quote{font-size:clamp(1.7rem,2.2vw,2.2rem)}
-  .pull{font-size:1.2rem}
+  .kicker{font-size:13px;letter-spacing:.18em}
+  h1{font-size:clamp(2.6rem,3.4vw,3.4rem)}
+  h2{font-size:clamp(2rem,2.6vw,2.5rem);margin-bottom:1.4rem}
+  .quote{font-size:clamp(1.9rem,2.4vw,2.4rem)}
+  .pull{font-size:1.3rem}
+  .attrib,.note,figcaption{font-size:14px}
+  .src{font-size:1rem}
+  .rule-brass{width:56px}
+  .lang a{font-size:13px}
   .hero-in{margin:0 auto;max-width:76rem;width:100%;padding:0 2.5rem 4.8rem}
-  .hero-in h1{max-width:34rem}
+  .hero-in h1{max-width:36rem}
+  .hero-sub{font-size:1.15rem}
+  .cta{font-size:17px;padding:1.15rem 1.9rem}
+  .form label{font-size:14px}
+  .form input[type=text],.form input[type=email]{font-size:17px;padding:.95rem 1.1rem}
   .wrap{max-width:76rem;display:grid;grid-template-columns:14rem 1fr;column-gap:4rem;align-items:start;padding:0 2.5rem}
   .wrap>*{grid-column:2;max-width:42rem}
   .wrap>.kicker{grid-column:1;grid-row:1/span 60;position:sticky;top:calc(var(--nav-h) + 2rem);margin-bottom:0;max-width:none}
-  .wrap>figure,.wrap>.steps,.wrap>.griglia,.wrap>.rev3,.wrap>.form{max-width:none}
-  .wrap>figure.ritratto{max-width:30rem}
+  .wrap>.steps,.wrap>.griglia,.wrap>.rev3,.wrap>.form{max-width:none}
+  .wrap>figure{max-width:42rem}
+  .wrap>figure.ritratto{max-width:26rem}
+  .band .wrap>figure.ritratto{max-width:22rem}
   .wrap>.steps{display:grid;grid-template-columns:1fr 1fr;gap:1.8rem 4rem;margin:1.8rem 0 2.2rem}
-  .steps li{margin-bottom:0;padding-left:2.3rem}
+  .steps li{margin-bottom:0;padding-left:2.5rem}
+  .steps li::before{width:24px;height:24px;font-size:13.5px}
   .wrap>.griglia{display:grid;grid-template-columns:repeat(3,1fr);gap:2.5rem;margin-bottom:2rem}
   .griglia .blk{margin-bottom:0}
   .wrap>.rev3{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin:1.8rem 0}
   .rev3 .rev{margin:0}
-  .rev3 .rev p{font-size:1rem}
+  .rev3 .rev p{font-size:1.05rem}
   #contatto .form{display:grid;grid-template-columns:1fr 1fr;column-gap:1.6rem;max-width:42rem}
   #contatto .form>*{grid-column:1/-1}
   #contatto .form>label:nth-of-type(1){grid-column:1}
   #contatto .form>label:nth-of-type(2){grid-column:2}
   .topbar-in{max-width:76rem;padding:0 2.5rem}
+  .topbar .cta{font-size:14px;padding:.65rem 1.15rem}
 }
 </style>
 </head>
